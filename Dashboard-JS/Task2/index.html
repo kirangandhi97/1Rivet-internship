@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fdb6d40d5d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Deskboard 2</title>
+</head>
+
+<body>
+    <!-- for the header  -->
+    <div class=" h-100">
+        <header class="header-wrapper d-flex justify-content-between">
+            <!-- hamburger logo  -->
+            <div class="left-side-header d-flex" >
+                <div>
+                    <label for="togglebar" >
+                    <span class="icon-wrapper fa-solid fa-bars"></span></label>
+                </div>
+                <!-- heading  -->
+                <div>
+                    <h4 id="header-dash">Dashboard</h4>
+                </div>
+            </div>
+            
+            <!-- prifile section on the right side -->
+            <div class="profile-properties d-flex justify-content-between ">
+                <a class="icon-wrapper fa-regular fa-bell"></a>
+                <!-- wrapper for profile image  -->
+                <div class="profile-pic-wrapper">
+                    <img src="./assets/image/OIP.jpg" alt="image">
+                </div>
+                <!-- wrapper for profile image ends here  -->
+                <a>john smith</a>
+                <a class="icon-wrapper fa-solid fa-angle-down"></a>
+            </div>
+        </header>
+        <!-- div for nav and main content  -->
+        <div class="d-flex h-100 overflow-hidden">
+            <!-- aside starts from here  -->
+            <input type="checkbox" id="togglebar">
+            <aside class="aside-bar d-flex flex-col">
+                <div class="sidebar-menu-1">
+                    <p class="text">General</p>
+                    <ul>
+                        <li>
+                            <a href="" class="nav-link">
+                                <span class="icon-wrapper fa-solid fa-magnifying-glass"></span>
+                                <span class="nav-text">Search</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="nav-link">
+                                <span class="icon-wrapper fa-solid fa-bell"></span>
+                                <span class="nav-text">Alerts</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="nav-link">
+                                <span class="icon-wrapper fa-solid fa-tag"></span>
+                                <span class="nav-text">Tags</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidebar-menu-2">
+                    <p class="text">Others</p>
+                    <ul>
+                        <li>
+                            <a href="" class="nav-link">
+                                <span class="icon-wrapper fa-solid fa-gear"></span>
+                                <span class="nav-text">Settings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="nav-link">
+                                <span class="icon-wrapper fa-solid fa-sun"></span>
+                                <span class="nav-text">Tips</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="nav-link">
+                                <span class="icon-wrapper fa-solid fa-trash-can"></span>
+                                <span class="nav-text">Trash</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="nav-link">
+                                <span class="icon-wrapper fa-solid fa-right-from-bracket"></span>
+                                <span class="nav-text">Logout</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </aside>
+            <!-- aside end here  -->
+            <main class="flex-grow">
+                <div class="above-table d-flex justify-content-between">
+                     <div class="search-bar">
+                         <input type="text" class="search-box" id="myInput" placeholder="Search here" onkeyup="searchFunc()">   <!--onkeydown="searchKey()"-->
+                         <input type="button" class="search-btn" value="search" onclick="getData()"><br>    
+                     </div>
+                </div>
+                <div class="table-wrapper">
+                    <table class="table ">
+                    <thead>
+                        <tr class="bg-info">
+                        <th>Item</th>
+                        <th>Date</th>
+                        <th>Type</th>
+                        <th>Est.Cost</th>
+                        <th>Last</th>
+                        <th>List</th>
+                        <th>Auto</th>
+                        </tr>
+                    </thead>
+                    <tbody id="myTable">
+
+                    </tbody>
+                </table></div>
+                
+            </main>
+            <!-- main ends here  -->
+        </div>
+    </div>
+    <script src="./assets/JS/script.js"></script>
+</body>
+
+</html>
