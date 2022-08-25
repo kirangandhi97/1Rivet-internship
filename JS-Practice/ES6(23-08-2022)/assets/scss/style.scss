@@ -1,0 +1,9 @@
+.test {
+    .parent-red & {
+        background-color: red;
+    }
+
+    .parent-blue & {
+        background-color: blue;
+    }
+}
