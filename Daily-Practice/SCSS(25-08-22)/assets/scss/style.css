@@ -11,26 +11,11 @@ body {
 }
 
 .wrapper {
+  display: flex;
   height: 100%;
   width: 100%;
-  display: flex;
 }
 
-.d-flex {
-  display: flex;
-}
-
-.secHeader-profile {
+section {
   flex-grow: 1;
-  flex-direction: column;
-}
-
-.main-wrapper {
-  flex-grow: 1;
-}
-
-.icon-link {
-  text-decoration: none;
-  color: black;
-  font-size: 20px;
 }/*# sourceMappingURL=style.css.map */

@@ -1,3 +1,4 @@
+// Global css
 * {
     margin: 0;
     padding: 0;
@@ -10,8 +11,33 @@ body {
     width: 100%;
 
 }
-
+// common css
 .wrapper {
-    display: flex;
     height: 100%;
+    width: 100%;
+    display: flex;
+}
+.d-flex{
+    display: flex;
+}
+// css for a section 
+.secHeader-profile{
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+// css for a main wrapper 
+.main-wrapper{
+    flex-grow: 1;
+}
+
+// css for a profile wrapper inside a header bar 
+// .profile-wrapper{
+ // }
+
+//  css for icon 
+.icon-link{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
 }
