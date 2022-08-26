@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,52 +9,106 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Dashboard</title>
 </head>
+
 <body>
+    <!-- main wrapper  -->
     <div class="wrapper">
+        <!-- aside :start -->
 
         <aside style="border: 1px solid blue;">
-            aside
+            <!-- header logo  -->
+            <figure class="brand-logo">
+                <img class="brand-img" src="./assets/images/R.png" alt="logo">
+            </figure>
+            <!-- end: header logo  -->
+            <!-- nav menu  -->
+            <div>
+                <ul>
+                    <li class="nav-item">
+                        <a href="">
+                            <span class="icon-link fa-solid fa-wallet"></span>
+                            <span class="nav-text">Menu</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="nav-item">
+                        <a href="">
+                            <span class="icon-link fa-solid fa-wallet"></span>
+                            <span class="nav-text">Menu</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="nav-item">
+                        <a href="">
+                            <span class="icon-link fa-solid fa-wallet"></span>
+                            <span class="nav-text">Menu</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="nav-item">
+                        <a href="">
+                            <span class="icon-link fa-solid fa-wallet"></span>
+                            <span class="nav-text">Menu</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="nav-item">
+                        <a href="">
+                            <span class="icon-link fa-solid fa-wallet"></span>
+                            <span class="nav-text">Menu</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- nav-menu:end  -->
         </aside>
+        <!-- aside:end  -->
 
-        <section style="border: 1px solid red;">
-            <header>
-                <div class="main-logo">
-                    <a href="">
-                        <span class="fa-solid fa-bars"></span>
-                    </a>
-                </div>
+        <!------------================================================================-->
+        <!-- section start  -->
+        <section class="section-main flex-1" style="border: 1px solid red; ">
+            <!-- header:start  -->
+            <header class="d-flex justify-content-between align-center">
+                <!-- header:end-->
+                <!-- header bar :starts  -->
                 <div class="header-dashboard-wrapper">
-                    <a href="">
-                        <span>logo</span>
-                    </a>
-                    <span>
-                        <h1>Dashboard</h1>
-                    </span>
+                    <a href="" class="icon-link fa-solid fa-bars"></a>
+                    <span>Dashboard</span>
                 </div>
-                <div class="profile-wrapper">
+                <!-- header bar :end  -->
+
+                <!-- profile wrapper start -->
+                <div class="profile-wrapper d-flex align-center">
                     <div class="moon-wrapper">
-                        <a class=" icon-link" href="">
-                            <span>moon</span>
+                        <a href="" class="fa-solid fa-moon icon-link">
+                            <!-- <span></span> -->
                         </a>
                     </div>
                     <div class="notification ">
-                        <a class="icon-link" href="">
-                            <span></span>
+                        <a class="fa-solid fa-mound icon-link" href="">
+                            <!-- <span></span> -->
                         </a>
                     </div>
-                    <div>
+                    <div class="d-flex align-center">
                         <span>
                             <h3>Odama Studio</h3>
                         </span>
-                        <div class="img-wrapper">
-                            <img class="img " src="" alt="profile photo">
-                        </div>
-                    </div>
-                    <div class="">
-                        <a class="icon-link" href=""></a>
+                        <a  href="" class="d-flex align-center">
+                            <figure class="img-wrapper">
+                                <img class="profile-img " src="./assets/images/800px_COLOURBOX3175455.jpg"
+                                    alt="profile photo">
+                            </figure>
+                            <span class="icon-link fa-solid fa-caret-down"></span>
+                        </a>
                     </div>
                 </div>
+                <!-- profile wrapper end -->
             </header>
+            <!-- header:end  -->
             <main>
                 main
             </main>
@@ -62,4 +117,5 @@
 
     </div>
 </body>
+
 </html>

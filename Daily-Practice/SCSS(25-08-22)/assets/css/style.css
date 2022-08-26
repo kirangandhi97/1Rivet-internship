@@ -10,7 +10,63 @@ body {
   width: 100%;
 }
 
+.d-flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex-grow: 1;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
 .wrapper {
   display: flex;
   height: 100%;
+}
+
+.icon-link {
+  text-decoration: none;
+  color: #7f7f7f;
+  font-size: 16px;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.img-wrapper {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.profile-img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header {
+  border-bottom: 1px solid #7f7f7f;
+}
+
+aside {
+  width: 150px;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+}
+.brand-logo .brand-img {
+  max-width: 100%;
+}
+
+.nav-item {
+  padding: 10px;
 }/*# sourceMappingURL=style.css.map */
