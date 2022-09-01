@@ -1,5 +1,6 @@
 .aside-wrapper {
-    flex: $flex-basis;
+    flex: 0 0 $sidebar-width;
+    max-width: $sidebar-width;
 }
 .nav-end{
     margin-top: $margin-top;

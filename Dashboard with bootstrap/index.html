@@ -11,59 +11,63 @@
     <title>Dashboard with Bootstrap</title>
 </head>
 
-<div>
-
+<body>
     <div class="body-wrapper h-100 d-flex ">
-        <aside class="aside-wrapper d-flex flex-column h-100 border">
-            <figure class="logo d-flex align-item-center justify-content-center py-5">
+        <aside class="aside-wrapper d-flex flex-column overflow-hidden h-100 border">
+            <figure class="logo d-flex align-item-center justify-content-center py-3 mb-0">
                 <span class="bi bi-star-fill text-primary"></span>
                 <h5>
                     <span class="text-primary">Star</span><span>Mall</span>
                 </h5>
             </figure>
 
-            <ul class="nav flex-column p-3 flex-grow-1">
-                <li class="nav-item">
-                    <a class="nav-link active text-light pt-3" aria-current="page" href="#">
-                        <span class="bi bi-border-inner">
-                            <span class="ps-3"> Dashboard</span>
-                        </span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active text-light pt-3" aria-current="page" href="#">
-                        <span class="bi bi-border-inner">
-                            <span class="ps-3"> Staff</span>
-                        </span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active text-light pt-3" aria-current="page" href="#">
-                        <span class="bi bi-border-inner">
-                            <span class="ps-3"> Shops</span>
-                        </span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active text-light pt-3" aria-current="page" href="#">
-                        <span class="bi bi-border-inner">
-                            <span class="ps-3"> Branches</span>
-                        </span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active text-light pt-3" aria-current="page" href="#">
-                        <span class="bi bi-border-inner">
-                            <span class="ps-3"> Events</span>
-                        </span>
-                    </a>
-                </li>
-            </ul>
-            <div class="events text-center">
-                    <img class="image " src="assets/images/cute-calendar-cartoon-icon-illustration-flat-cartoon-style-eps-10-vector.webp" alt="calender">
-                    <p >you can easily manage your events</p>
-                    <input type="button" value="Manage Events">
+            <div class="h-100 overflow-auto">
+                <ul class="nav flex-column p-3 flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link active text-light pt-3" aria-current="page" href="#">
+                            <span class="bi bi-border-inner">
+                                <span class="ps-3"> Dashboard</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light pt-3" aria-current="page" href="#">
+                            <span class="bi bi-border-inner">
+                                <span class="ps-3"> Staff</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light pt-3" aria-current="page" href="#">
+                            <span class="bi bi-border-inner">
+                                <span class="ps-3"> Shops</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light pt-3" aria-current="page" href="#">
+                            <span class="bi bi-border-inner">
+                                <span class="ps-3"> Branches</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light pt-3" aria-current="page" href="#">
+                            <span class="bi bi-border-inner">
+                                <span class="ps-3"> Events</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="events text-center">
+                    <img class="image "
+                        src="assets/images/cute-calendar-cartoon-icon-illustration-flat-cartoon-style-eps-10-vector.webp"
+                        alt="calender">
+                    <p>you can easily manage your events</p>
+                    <!-- <input type="button" value="Manage Events"> -->
+                    <button class="btn btn-light">Manage Events</button>
                 </div>
+            </div>
             <ul class="nav nav-end">
                 <li class="nav-item">
                     <a class="nav-link active text-light pt-3" aria-current="page" href="#">
@@ -80,19 +84,18 @@
                     </a>
                 </li>
             </ul>
-    </aside>
-    <div class="main-wrapper border border-success flex-grow-1">
-        <header>
+        </aside>
+        <div class="main-wrapper border border-success flex-grow-1">
+            <header>
 
 
-        </header>
-        <main class="d-flex">
-            <div>main-content</div>
-            <aside class="sub-aside">aside</aside>
-        </main>
+            </header>
+            <main class="d-flex">
+                <div>main-content</div>
+                <aside class="sub-aside">aside</aside>
+            </main>
+        </div>
     </div>
-    </div>
-</div>
 </body>
 
 </html>
