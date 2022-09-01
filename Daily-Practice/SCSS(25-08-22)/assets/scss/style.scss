@@ -1,4 +1,8 @@
+
+// Global css
+
 // global css 
+
 * {
     margin: 0;
     padding: 0;
@@ -24,8 +28,44 @@ body {
 .justify-content-between {
     justify-content: space-between;
 }
+<<<<<<< HEAD
 
 .icon-link {
+=======
+// common css
+.wrapper {
+    height: 100%;
+// <<<<<<< HEAD
+    width: 100%;
+    display: flex;
+}
+.d-flex{
+    display: flex;
+}
+// css for a section 
+.secHeader-profile{
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+// css for a main wrapper 
+.main-wrapper{
+    flex-grow: 1;
+}
+
+// css for a profile wrapper inside a header bar 
+// .profile-wrapper{
+ // }
+
+//  css for icon 
+.icon-link{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.icon-link{
+>>>>>>> d3b41f37edbb6d2ea0b15fc1ac4e8fb1311b24a5
     text-decoration: none;
     color: #7f7f7f;
     font-size: 16px;
@@ -101,6 +141,7 @@ aside {
     padding: 10px;
 }
 
+<<<<<<< HEAD
 .nav-div {
     width: 150px;
 }
@@ -136,3 +177,5 @@ a {
     width: 100%;
     background-color: white;
 }
+=======
+>>>>>>> d3b41f37edbb6d2ea0b15fc1ac4e8fb1311b24a5

@@ -22,6 +22,36 @@ body {
   justify-content: space-between;
 }
 
+<<<<<<< HEAD
+=======
+.wrapper {
+  height: 100%;
+<<<<<<< HEAD
+  width: 100%;
+  display: flex;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.secHeader-profile {
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.main-wrapper {
+  flex-grow: 1;
+}
+
+.icon-link {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+=======
+}
+
+>>>>>>> d3b41f37edbb6d2ea0b15fc1ac4e8fb1311b24a5
 .icon-link {
   text-decoration: none;
   color: #7f7f7f;
@@ -89,6 +119,7 @@ aside {
 
 .nav-item {
   padding: 10px;
+<<<<<<< HEAD
 }
 
 .nav-div {
@@ -120,4 +151,7 @@ a {
 .section-main {
   width: 100%;
   background-color: white;
+=======
+>>>>>>> e3e63952f656473bc3c933dd3a08ce1d5418224d
+>>>>>>> d3b41f37edbb6d2ea0b15fc1ac4e8fb1311b24a5
 }/*# sourceMappingURL=style.css.map */
