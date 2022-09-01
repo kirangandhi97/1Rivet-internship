@@ -7,7 +7,7 @@
 html,
 body {
   height: 100%;
-  width: 100%;
+  max-width: 100%;
 }
 
 .d-flex {
@@ -22,11 +22,6 @@ body {
   justify-content: space-between;
 }
 
-.wrapper {
-  display: flex;
-  height: 100%;
-}
-
 .icon-link {
   text-decoration: none;
   color: #7f7f7f;
@@ -37,11 +32,26 @@ body {
   align-items: center;
 }
 
+.flex-column {
+  flex-direction: column;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+header {
+  border-bottom: 1px solid #7f7f7f;
+  height: 55px;
+  padding: 4px 20px;
+}
+
 .img-wrapper {
   width: 40px;
   height: 40px;
   overflow: hidden;
   border-radius: 50%;
+  margin-right: 4px;
 }
 
 .profile-img {
@@ -51,22 +61,63 @@ body {
      object-fit: cover;
 }
 
-header {
-  border-bottom: 1px solid #7f7f7f;
+.h3-wrap {
+  margin-right: 20px;
 }
 
 aside {
-  width: 150px;
+  background-color: black;
+  width: 250px;
 }
 
 .brand-logo {
-  width: 40px;
-  height: 40px;
+  height: 55px;
+  overflow: hidden;
+  border-bottom: 1px solid #aaa2a2;
 }
 .brand-logo .brand-img {
-  max-width: 100%;
+  height: 100%;
+  margin-left: 40px;
+}
+
+.nav-link,
+.nav-text {
+  margin-left: 16px;
+  margin-top: 20px;
+  color: aliceblue;
 }
 
 .nav-item {
   padding: 10px;
+}
+
+.nav-div {
+  width: 150px;
+}
+
+a {
+  all: unset;
+  padding-right: 20px;
+}
+
+.main-wrapper {
+  height: 100%;
+  padding: 20px;
+  background-color: #cac0c0;
+}
+
+.card-wrapper {
+  flex: 0 0 25%;
+  padding: 20px;
+  background-color: white;
+  margin-right: 5px;
+}
+
+.row1 {
+  margin-top: 20px;
+}
+
+.section-main {
+  width: 100%;
+  background-color: white;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,18 @@
+.aside-wrapper {
+    flex: $flex-basis;
+}
+.nav-end{
+    margin-top: $margin-top;
+}
+.events{
+    background-color: $card-bg;
+    margin: 0 20px;
+    padding: 20px;
+
+    .image{
+        height: 40px;
+        width: 40px;
+        transform: rotate(-20deg);
+        margin-top: -60px;
+    }
+}

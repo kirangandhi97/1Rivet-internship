@@ -8,65 +8,131 @@
 html,
 body {
     height: 100%;
-    width: 100%;
-    
+    max-width: 100%;
+
 }
 
 // common css 
-.d-flex{
+.d-flex {
     display: flex;
 }
 
-.flex-1{
+.flex-1 {
     flex-grow: 1;
 }
-.justify-content-between{
+
+.justify-content-between {
     justify-content: space-between;
 }
 
-.wrapper {
-    display: flex;
-    height: 100%;
-}
-.icon-link{
+.icon-link {
     text-decoration: none;
     color: #7f7f7f;
     font-size: 16px;
 }
-.align-center{
+
+.align-center {
     align-items: center;
 }
 
+.flex-column {
+    flex-direction: column;
+}
+
+.h-100 {
+    height: 100%;
+}
+
 // header css 
-.img-wrapper{
+header {
+    border-bottom: 1px solid #7f7f7f;
+    height: 55px;
+    padding: 4px 20px;
+}
+
+.img-wrapper {
     width: 40px;
     height: 40px;
     overflow: hidden;
     border-radius: 50%;
+    margin-right: 4px;
 
 }
-.profile-img{
+
+.profile-img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
-header{
-    border-bottom: 1px solid #7f7f7f;
+
+.h3-wrap {
+    margin-right: 20px;
 }
-aside{
+
+
+// aside css 
+aside {
+    background-color: black;
+    width: 250px;
+}
+
+.brand-logo {
+    // width: 100%;
+    height: 55px;
+    overflow: hidden;
+    border-bottom: 1px solid #aaa2a2;
+
+    .brand-img {
+
+        // max-width: 100%;
+        height: 100%;
+        margin-left: 40px;
+    }
+}
+
+.nav-link,
+.nav-text {
+    margin-left: 16px;
+    margin-top: 20px;
+    color: aliceblue;
+}
+
+.nav-item {
+    padding: 10px;
+}
+
+.nav-div {
     width: 150px;
 }
-.brand-logo{
-    width: 40px;
-    height: 40px;
-    
-.brand-img{
-    
-    max-width: 100%;
-}
+
+a {
+    all: unset;
+    padding-right: 20px;
 }
 
+//  css for card 
+.main-wrapper {
+    height: 100%;
+    // height: 100vh;
+    padding: 20px;
+    background-color:#cac0c0;
+}
 
-.nav-item{
-    padding: 10px;
+.card-wrapper {
+    // flex-basis: 25%;
+    flex: 0 0 25%;
+    // width: 25%;
+    padding: 20px;
+   background-color: white;
+   margin-right: 5px;
+
+
+}
+.row1{
+    margin-top: 20px;
+}
+
+.section-main {
+    width: 100%;
+    background-color: white;
 }
