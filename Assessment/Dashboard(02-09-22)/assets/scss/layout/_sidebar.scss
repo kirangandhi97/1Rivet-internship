@@ -1,0 +1,15 @@
+// Styles for Sidebar lies here
+.sidebar{
+    flex: 0 0 $sidebar-width;
+   background-color: $sidebar-bg;
+   li:hover, li.active{
+    background-color: $navbar-hover;
+    .nav-link{
+        color: $nav-text-hover;
+    }
+}
+}
+
+.logo-link{
+    font-size: 20px;
+}

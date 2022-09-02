@@ -1,0 +1,23 @@
+// Header area style
+.header-wrapper{
+    background-color: $header-bg;
+}
+.search-bar{
+    width: $searchbar-width;
+}
+input:focus {
+    outline:none;
+}
+
+// image wrapper 
+.image-wrapper{
+    height: 30px;
+    width: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+    img{
+        max-width: 100%;
+    }
+}
+
+// profile wrapper 
