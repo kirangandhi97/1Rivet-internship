@@ -1,0 +1,76 @@
+what is Angular?
+----->  Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.
+----->  Angular is a development platform, built on TypeScript.
+----->  A component-based framework for building scalable web applications
+----->  A collection of well-integrated libraries that cover a wide variety of features, including routing, forms management, client-server communication, and more
+----->  A suite of developer tools to help you develop, build, test, and update your code.
+
+
+2)Workspace
+-----> By default, ng new generates an application at the root of the workspace under the src/ folder.
+This causes many to assume a workspace is an application. This is not the case! If you run...
+                           ng new myworkspace --create-application=false
+this will generate a new workspace without the src/ folder. By specifying --create-application=false, Angular CLI omits this default application from being generated.
+The concept of a workspace is really just an organizational thing. A workspace allows for multiple projects to be defined under a single angular.json configuration.
+The Angular team realized that sometimes components, services, etc. can apply to multiple applications. To more easily share code across different apps, the concept of an Angular library was born
+
+
+3)library
+------> A library is a collection of components, services, directives etc. that can be shared across different Angular projects.
+You generate a new library just like you would a component, service or anything else:
+                 ng g library mylibrary
+This will generate a new library mylibrary under the projects folder of your workspace.
+if we wanted to create an application, we could also run:
+                 ng g application myapp
+This will generate a new application mylibrary under THE SAME projects folder of your workspace.
+
+4)Dependency vs DevDependecies vs PeerDependencies
+--->Dependencies	devDependencies	peerDependencies
+--->A dependency is a library that a project needs to function effectively.	
+--->If a package doesn’t already exist in the node_modules directory, then it is automatically added.
+--->These are the libraries you need when you run your code.
+--->Included in the final code bundle.
+--->Dependencies can be added to your project by running :
+
+      npm install <package_name>
+
+
+
+--->DevDependencies are the packages a developer needs during development. 	
+--->As you install a package, npm will automatically install the dev dependencies.
+--->These dependencies may be needed at some point during the development process, but not during execution.
+--->Included in the final code bundle . 
+--->Dev dependencies can be added to your project by running :
+
+      npm install <package_name> --save-dev
+
+
+
+--->A peer dependency specifies that our package is compatible with a particular version of an npm package. 
+--->peerDependencies are not automatically installed. You need to manually modify your package.json file in order to add a Peer Dependency.
+--->Peer dependencies are only encountered when you publish your own package, that is, when you develop code that will be used by other programs. 
+--->Can be included only when you are publishing your own package. 
+--->Change the package.json file manually.
+
+
+
+Difference between tilde (~) and caret (^) in package.json:
+
+Tilde(~) notation
+--->Used for Approximately equivalent to version.
+It will update you to all future patch versions, without incrementing the minor version. ~1.2.3 will use releases from 1.2.3 to <1.3.
+It gives you bug fix releases.	
+It will update in decimals.
+Not a default notation used by NPM.	
+
+   Example: ~1.0.2
+
+
+
+Caret(^) notation
+Used for Compatible with version.
+It will update you to all future minor/patch versions, without incrementing the major version. ^2.3.4 will use releases from 2.3.4 to <3.0.0
+It gives you backwards-compatible new functionality as well.
+It will update to its latest version in numbers.	
+Used by NPM as default notation.
+	Example: ^1.0.2
