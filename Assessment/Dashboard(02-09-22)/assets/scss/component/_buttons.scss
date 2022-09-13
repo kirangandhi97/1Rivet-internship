@@ -1,1 +1,6 @@
 // Button styles goes here
+.btn{
+    &:hover, &.active{
+        color: $btn-link-hover-color;
+    }
+}

@@ -8,6 +8,8 @@ $dark: #2a4563;
 
 
 
+
+
 // Body
 $body-color: $primary;
 $body-bg: $secondary;
@@ -17,11 +19,18 @@ $body-bg: $secondary;
 // side-bar 
 $sidebar-bg:$white;
 $nav-text-hover:$info;
-$navbar-hover: rgba($nav-text-hover, 0.15);
+$navbar-hover: #f6fafd;
+
 
 // header bar 
 $header-bg:$white;
 
 $card-cap-bg: $white;
 
+
+// button hover-active color 
+$btn-link-hover-color: $white;
+
+// light-gray-icon
+$light-gray-icon:#e9eaec;
 

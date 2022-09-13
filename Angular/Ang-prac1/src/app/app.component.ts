@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Ang-prac1';
+getData(value:string){
+  console.log()
+}
+  // name = 'kiran';
+getName(name:string,age:number){
+  alert(name);
+  console.log(age);
+  
+}
+  
 }

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -6576,9 +6576,9 @@ progress {
   --bs-btn-color: var(--bs-link-color);
   --bs-btn-bg: transparent;
   --bs-btn-border-color: transparent;
-  --bs-btn-hover-color: var(--bs-link-hover-color);
+  --bs-btn-hover-color: #ffffff;
   --bs-btn-hover-border-color: transparent;
-  --bs-btn-active-color: var(--bs-link-hover-color);
+  --bs-btn-active-color: #ffffff;
   --bs-btn-active-border-color: transparent;
   --bs-btn-disabled-color: #6c757d;
   --bs-btn-disabled-border-color: transparent;
@@ -6837,8 +6837,13 @@ progress {
   color: #14212f;
 }
 
+.btn:hover, .btn.active {
+  color: #ffffff;
+}
+
 .header-wrapper {
   background-color: #ffffff;
+  height: 98px;
 }
 
 .search-bar {
@@ -6873,19 +6878,48 @@ input:focus {
   color: #9fb1b8;
 }
 
+.btn-shadow {
+  box-shadow: 2px 8px 25px -7px rgb(29, 165, 150);
+}
+
 .sidebar {
   flex: 0 0 160px;
   background-color: #ffffff;
+  box-shadow: 11px 0px 26px -23px rgb(29, 165, 151);
 }
-.sidebar li:hover, .sidebar li.active {
-  background-color: rgba(29, 165, 151, 0.15);
+.sidebar .nav-item {
+  width: 100%;
 }
-.sidebar li:hover .nav-link, .sidebar li.active .nav-link {
+.sidebar li:hover,
+.sidebar li.active {
+  background-color: #f6fafd;
+  font-weight: 600;
+}
+.sidebar li:hover .nav-link,
+.sidebar li.active .nav-link {
   color: #1da597;
+}
+.sidebar li:hover .arrow-right,
+.sidebar li.active .arrow-right {
+  border-right: 10px solid #1da597;
+  border-bottom: 10px solid #1da597;
+  border-left: 10px solid transparent;
+  border-top: 10px solid transparent;
+  width: 0;
+  height: 0;
 }
 
 .logo-link {
   font-size: 20px;
+}
+
+.img-link {
+  width: 160px;
+}
+
+.logo-wrapper {
+  height: 98px;
+  width: 160px;
 }
 
 .top-0 {
@@ -6911,4 +6945,12 @@ input:focus {
 ul {
   list-style-type: none;
   padding-left: 0;
+}
+
+.col-h-400px {
+  height: 400px !important;
+}
+
+.light-gray-icon {
+  color: #e9eaec;
 }/*# sourceMappingURL=style.css.map */

@@ -9,3 +9,8 @@
 .card-text{
     color: #9fb1b8;
 }
+.btn-shadow{
+    -webkit-box-shadow: 2px 8px 25px -7px rgba(29,165,150,1);
+-moz-box-shadow: 2px 8px 25px -7px rgba(29,165,150,1);
+box-shadow: 2px 8px 25px -7px rgba(29,165,150,1)
+}

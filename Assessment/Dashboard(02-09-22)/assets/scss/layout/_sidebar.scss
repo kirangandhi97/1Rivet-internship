@@ -1,15 +1,44 @@
 // Styles for Sidebar lies here
-.sidebar{
+.sidebar {
     flex: 0 0 $sidebar-width;
-   background-color: $sidebar-bg;
-   li:hover, li.active{
-    background-color: $navbar-hover;
-    .nav-link{
-        color: $nav-text-hover;
+    background-color: $sidebar-bg;
+    -webkit-box-shadow: 11px 0px 26px -23px rgba(29,165,151,1);
+-moz-box-shadow: 11px 0px 26px -23px rgba(29,165,151,1);
+box-shadow: 11px 0px 26px -23px rgba(29,165,151,1);
+
+    .nav-item {
+        width: 100%;
+    }
+
+    li:hover,
+    li.active {
+        background-color: $navbar-hover;
+        font-weight: $font-weight-semibold ;
+
+        .nav-link {
+            color: $nav-text-hover;
+        }
+
+        .arrow-right {
+            border-right: 10px solid $info;
+            border-bottom: 10px solid $info;
+            border-left: 10px solid transparent;
+            border-top: 10px solid transparent;
+            width: 0;
+            height: 0;
+        }
     }
 }
+
+.logo-link {
+    font-size: 20px;
 }
 
-.logo-link{
-    font-size: 20px;
+.img-link {
+    width: 160px;
+}
+
+.logo-wrapper {
+    height: 98px;
+    width: 160px;
 }
