@@ -1,0 +1,39 @@
+<h1>condition works! (if-else)</h1>
+
+<h1 *ngIf="condition;then ifblock else elseblock"></h1>
+<button (click)="yes()">true</button>
+<button (click)="no()">false</button>
+<ng-template #ifblock><h1>if block</h1></ng-template>
+<ng-template #elseblock><h1>else block</h1></ng-template>
+
+
+<h1>else-if OR multiple condition</h1>
+<ng-template [ngIf]="color==='red'">
+    <h1 style="color: red;">Red color</h1>
+</ng-template>
+<ng-template [ngIf]="color==='green'">
+    <h1 style="color: green;">green color</h1>
+</ng-template>
+<ng-template [ngIf]="color==='blue'">
+    <h1 style="color: blue;">blue color</h1>
+</ng-template>
+
+<br><br><br>
+<h1>switchcase </h1>
+<div [ngSwitch]="color">
+    <h1 *ngSwitchCase="'red'" style="color: red;">red color</h1>
+    <h1 *ngSwitchCase="'green'" style="color: green;">green color</h1>
+    <h1 *ngSwitchCase="'blue'" style="color: blue;">blue color</h1>
+    <h1 *ngSwitchCase="'aliceblue'" style="color: aliceblue;">aliceblue color</h1>
+    <h1 *ngSwitchCase="'gray'" style="color: gray;">gray color</h1>
+    <h1 *ngSwitchDefault>unknown property</h1>
+</div>
+
+
+<h1>for loop</h1>
+<div *ngFor="let i of user">
+    <p>{{i}}</p>
+</div>
+<div *ngFor="let item of userslist">
+    <p>{{item.name}} : {{item.email}}</p>
+</div>

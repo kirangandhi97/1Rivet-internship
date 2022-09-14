@@ -2,3 +2,15 @@
 <app-child1></app-child1>
 
 <button (click)="getName('kiran',25)">get Name</button>
+
+<h2>get input box value & display</h2>
+<input #box type="text" name="text-box" >
+<button (click)="getInput(box.value)">click me</button>
+<!-- <p >value is: {{displayVal}}</p> -->
+<!-- <p *ngFor="let item of displayVal">value is: {{item}}</p> -->
+<div *ngFor="let item of displayVal">
+    <p>value is: {{item}}</p>
+</div>
+
+<app-binding></app-binding>
+<app-condition></app-condition>

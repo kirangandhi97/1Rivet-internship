@@ -6,14 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./child1.component.scss']
 })
 export class Child1Component implements OnInit {
- public textData:boolean = false;
+ public textData:boolean;
   
-  constructor() { }
+  constructor() {
+    this.textData=false;
+   }
 
   ngOnInit(): void {
   }
   clickme(){
-    this.textData = true;
+    this.textData = !this.textData;
   }
 
 }
