@@ -20,5 +20,6 @@ export class ChildCommunicationComponent implements OnInit {
 
   public addAge(val: string) {
     this.itemeventemitter.emit(val);
+    
   }
 }

@@ -8,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class Parent1Component implements OnInit {
 
   title = 'Ang-prac1';
-
-
+  beverages:string="tea";
   // name = 'kiran';
 
  public displayVal:string[];
+coldrink: any;
 
  constructor(){
   this.displayVal=["kiran","jinal","hiral"];
