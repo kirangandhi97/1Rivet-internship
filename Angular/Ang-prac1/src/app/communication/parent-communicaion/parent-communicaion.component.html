@@ -1,0 +1,14 @@
+<p>{{title}}</p>
+<input #textbox type="text" placeholder="enter value here">
+<br>
+<br>
+<button (click)="addData(textbox.value)">add data</button>
+
+<h3>child to parent</h3>
+<p *ngFor="let i in "></p>
+
+
+<app-child-communication [data]="userName" (itemeventemitter)="addChildData($event)"></app-child-communication>
+
+
+

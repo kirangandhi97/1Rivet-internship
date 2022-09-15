@@ -1,0 +1,10 @@
+<p>child-communication works!</p>
+<div>
+    <p *ngFor="let i of data">
+        {{i}}
+    </p>
+</div>
+
+
+<input type="text" placeholder="child component text box" #agebox>
+<button (click)="addAge(agebox.value)">add age</button>

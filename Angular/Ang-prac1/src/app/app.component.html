@@ -1,16 +1,35 @@
-<p>root app</p>
-<app-child1></app-child1>
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" routerLink="home">Home</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="#" routerLink="binding">Binding</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" routerLink="communication">Communication</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" routerLink="condition">
+              dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="condition">condition</a></li>
+              <li><a class="dropdown-item" routerLink="condition/pipe">pipes</a></li>
+              <li><a class="dropdown-item" routerLink="condition/pipes2">pipes2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="simple">parent-child(simple)</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<router-outlet></router-outlet>
 
-<button (click)="getName('kiran',25)">get Name</button>
-
-<h2>get input box value & display</h2>
-<input #box type="text" name="text-box" >
-<button (click)="getInput(box.value)">click me</button>
-<!-- <p >value is: {{displayVal}}</p> -->
-<!-- <p *ngFor="let item of displayVal">value is: {{item}}</p> -->
-<div *ngFor="let item of displayVal">
-    <p>value is: {{item}}</p>
-</div>
-
-<app-binding></app-binding>
-<app-condition></app-condition>
