@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child1',
@@ -6,7 +6,10 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./child1.component.scss']
 })
 export class Child1Component implements OnInit {
- @Input() coldrink:string='';
+ @Input() name:string[]=[];
+ @Output() bevEventEmitter = new EventEmitter<string>();
+
+
  bev:string[]=[];
  
   public textData:boolean;
@@ -14,16 +17,20 @@ export class Child1Component implements OnInit {
   
   constructor() {
     this.textData=false;
+    
    }
 
   ngOnInit(): void {
+    // console.log(this.coldrink);
+    
   }
   clickme(){
     this.textData = !this.textData;
   }
 
   addBev(val:string){
-    this.bev.push(val);
+    // this.coldrink.push(val);
+    this.bevEventEmitter.emit(val);
     console.log(val);
   }
 

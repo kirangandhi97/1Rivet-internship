@@ -8,14 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class Parent1Component implements OnInit {
 
   title = 'Ang-prac1';
-  beverages:string="tea";
-  // name = 'kiran';
+  beverages:string[]=["tea"];
+  displayVal=['sheetal'];
 
- public displayVal:string[];
 coldrink: any;
 
  constructor(){
-  this.displayVal=["kiran","jinal","hiral"];
+  
  }
 
   ngOnInit(): void {
@@ -34,6 +33,12 @@ coldrink: any;
   public getInput(val:string){
     console.log(val);  
     this.displayVal.push(val);
+    
+  }
+
+  public getBevInput(val:string){
+    console.log(val);  
+    this.beverages.push(val);
     
   }
 }
