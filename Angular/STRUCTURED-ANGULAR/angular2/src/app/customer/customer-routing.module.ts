@@ -9,8 +9,9 @@ const routes: Routes = [
   component: CustomerComponent,
   children: [
     {
-      path: 'form',
-      component: CustomersFormComponent,
+      path: ' ',
+      pathMatch: 'full',
+      redirectTo: 'list'
     },
     {
       path:'list',

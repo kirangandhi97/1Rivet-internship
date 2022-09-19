@@ -9,13 +9,13 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let i of customers_details">
-            <td>{{i.id}}</td>
-            <td>{{i.name}}</td>
-            <td>{{i.age}}</td>
-            <td>{{i.city}}</td>
-            <td><button routerLink='edit/2'>Edit</button></td>
+        <tr *ngFor="let customer of customers_details">
+            <td>{{customer.id}}</td>
+            <td>{{customer.name}}</td>
+            <td>{{customer.age}}</td>
+            <td>{{customer.city}}</td>
+            <td><button [routerLink]="['../edit', customer.id]">Edit</button></td>
         </tr>
     </tbody>
 </table>
-<button (click)="add()" routerLink='add'>Add</button>
+<button (click)="add()" routerLink='../add'>Add</button>

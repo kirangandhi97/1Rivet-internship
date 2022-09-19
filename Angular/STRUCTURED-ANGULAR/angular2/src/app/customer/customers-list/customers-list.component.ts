@@ -23,7 +23,7 @@ export class CustomersListComponent implements OnInit {
     this.customers_details.push(val)
   }
 
-  add(){
+ public add(){
 
   }
 }
