@@ -1,0 +1,21 @@
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+            <th>Edit</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of customers_details">
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.age}}</td>
+            <td>{{i.city}}</td>
+            <td><button routerLink='edit/2'>Edit</button></td>
+        </tr>
+    </tbody>
+</table>
+<button (click)="add()" routerLink='add'>Add</button>
