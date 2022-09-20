@@ -3,13 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { CustomerComponent } from './customer.component';
 import { CustomersFormComponent } from './customers-form/customers-form.component';
 import { CustomersListComponent } from './customers-list/customers-list.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 const routes: Routes = [
   { path: '', 
   component: CustomerComponent,
   children: [
     {
-      path: ' ',
+      path: '',
       pathMatch: 'full',
       redirectTo: 'list'
     },
@@ -18,6 +19,11 @@ const routes: Routes = [
       component: CustomersListComponent,
     },
     {
+      path: 'form',
+      component: CustomersFormComponent,
+    },
+
+    {
       path:'add',
       component: CustomersFormComponent,
     },
@@ -25,6 +31,10 @@ const routes: Routes = [
       path:'edit/:id',
       component: CustomersFormComponent,
     },
+    {
+      path:'reactive',
+      component: ReactiveFormComponent,
+    }
 
   ]
 }

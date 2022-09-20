@@ -1,0 +1,91 @@
+<form [formGroup]="userLoginForm">
+  <div class="mb-3">
+    <label class="form-label">First Name:</label>
+    <input type="text" class="form-control" formControlName="firstname">
+    <div
+      *ngIf="userLoginForm.controls['firstname'].invalid && (isSubmitted || userLoginForm.controls['firstname'].touched|| userLoginForm.controls['firstname'].dirty)">
+      <span class="text-danger" *ngIf="userLoginForm.controls['firstname'].errors?.['required']">please enter a valid
+        value</span>
+      <span class="text-danger" *ngIf="userLoginForm.controls['firstname'].errors?.['minlength']">first name should be
+        atleast 5 characters</span>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Last Name:</label>
+    <input type="text" class="form-control" formControlName="lastname">
+    <div
+      *ngIf="userLoginForm.controls['lastname'].invalid && (isSubmitted || userLoginForm.controls['lastname'].touched|| userLoginForm.controls['lastname'].dirty)">
+      <span class="text-danger" *ngIf="userLoginForm.controls['lastname'].errors?.['required']">please enter a valid
+        value</span>
+      <span class="text-danger" *ngIf="userLoginForm.controls['lastname'].errors?.['minlength']">last name should be
+        atleast 5 characters</span>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Age:</label>
+    <input type="text" class="form-control" formControlName="age">
+    <div
+      *ngIf="userLoginForm.controls['age'].invalid && (isSubmitted || userLoginForm.controls['age'].touched|| userLoginForm.controls['age'].dirty)">
+      <span class="text-danger" *ngIf="userLoginForm.controls['age'].errors?.['required']">please enter a valid
+        value</span>
+      <span class="text-danger" *ngIf="userLoginForm.controls['age'].errors?.['maxlength']">age should not be more than
+        3 characters</span>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Email:</label>
+    <input type="email" class="form-control" formControlName="email">
+    <div
+      *ngIf="userLoginForm.controls['email'].invalid && (isSubmitted || userLoginForm.controls['email'].touched|| userLoginForm.controls['email'].dirty)">
+      <span class="text-danger" *ngIf="userLoginForm.controls['email'].errors?.['required']">please enter a valid
+        value</span>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Password</label>
+    <input type="password" class="form-control" formControlName="password">
+    <div
+      *ngIf="userLoginForm.controls['password'].invalid && (isSubmitted || userLoginForm.controls['password'].touched|| userLoginForm.controls['password'].dirty)">
+      <span class="text-danger" *ngIf="userLoginForm.controls['password'].errors?.['required']">please enter a valid
+        value</span>
+      <!-- <span class="text-danger" *ngIf="userLoginForm.controls['age'].errors?.['maxlength']">age should be more than 6 characters</span> -->
+      <span class="text-danger" *ngIf="userLoginForm.controls['password'].errors?.['pattern']">please use atleast one
+        @,# in password</span>
+
+    </div>
+    <div class="mb-3 mt-5">
+      <div formGroupName="address">
+        <label class="form-label">Address:</label>
+        <section class="section1">
+          <label class="form-label">City</label>
+          <input type="text" class="form-control" formControlName="city">
+          <div
+            *ngIf="userLoginForm.controls['address'].get('city')?.invalid && (isSubmitted || userLoginForm.controls['address'].get('city')?.touched || userLoginForm.controls['address'].get('city')?.dirty)">
+            <span class="text-danger" *ngIf="userLoginForm.controls['address'].get('city')?.errors?.['required']">please enter a valid value</span>
+            </div>
+        </section>
+        <section class="section2">
+          <label class="form-label">State</label>
+          <input type="text" class="form-control" formControlName="state">
+          <div
+          *ngIf="userLoginForm.controls['address'].get('state')?.invalid && (isSubmitted || userLoginForm.controls['address'].get('state')?.touched|| userLoginForm.controls['address'].get('state')?.dirty)">
+          <span class="text-danger" *ngIf="userLoginForm.controls['address'].get('state')?.errors?.['required']">please enter a
+              valid
+              value</span>
+            </div>
+        </section>
+        <section class="section3">
+          <label class="form-label">Pin Code</label>
+          <input type="text" class="form-control" formControlName="pinCode">
+          <div
+            *ngIf="userLoginForm.controls['address'].get('pinCode')?.invalid && (isSubmitted || userLoginForm.controls['address'].get('pinCode')?.touched|| userLoginForm.controls['address'].get('pinCode')?.dirty)">
+            <span class="text-danger" *ngIf="userLoginForm.controls['address'].get('pinCode')?.errors?.['required']">please enter a
+              valid
+              value</span>
+            </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+</form>

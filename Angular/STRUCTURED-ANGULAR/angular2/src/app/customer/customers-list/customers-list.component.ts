@@ -19,9 +19,10 @@ export class CustomersListComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  public edit(val:any){
-    this.customers_details.push(val)
-  }
+
+  // public edit(val:any){
+  //   this.customers_details.push(val)
+  // }
 
  public add(){
 

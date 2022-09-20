@@ -14,7 +14,7 @@
             <td>{{customer.name}}</td>
             <td>{{customer.age}}</td>
             <td>{{customer.city}}</td>
-            <td><button [routerLink]="['../edit', customer.id]">Edit</button></td>
+            <td><button [routerLink]="['../edit', customer.id]" [queryParams]="{name:customer.name}" [fragment]="customer.age">Edit</button></td>
         </tr>
     </tbody>
 </table>

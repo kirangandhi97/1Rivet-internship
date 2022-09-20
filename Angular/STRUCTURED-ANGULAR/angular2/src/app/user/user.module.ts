@@ -13,7 +13,7 @@ import { ConditionComponent } from './condition/condition.component';
     UserComponent,
     BindingComponent,
     CommunicationComponent,
-    ConditionComponent
+    ConditionComponent,
   ],
   imports: [
     CommonModule,
