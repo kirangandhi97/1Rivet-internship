@@ -10,9 +10,16 @@ import { FormControl, FormGroup, Validators, FormBuilder} from '@angular/forms'
 export class ReactiveFormComponent implements OnInit {
   public userLoginForm:FormGroup;
   public isSubmitted:boolean=false;
+  public userData:any;
   constructor(
     public formbuilder:FormBuilder
   ) {
+    this.userData = {
+      firstname: 'kiran',
+      lastname: 'Gandhi',
+      age: 20,
+    }
+
     this.userLoginForm = new FormGroup(''); 
     //using form-control
     // this.userLoginForm = new FormGroup({
@@ -25,6 +32,7 @@ export class ReactiveFormComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    
     this.userLoginForm = this.formbuilder.group({
       firstname: ['', [Validators.required, Validators.minLength(5)]],
       lastname: ['', Validators.required],
@@ -35,16 +43,19 @@ export class ReactiveFormComponent implements OnInit {
         city: ['', Validators.required],
         state: ['', Validators.required],
         pinCode: ['', Validators.required],
-      })
+      })  
     })
-
+    this.userLoginForm.patchValue(this.userData);
   }
 
   onSubmit(){
     console.log(this.userLoginForm);
     this.isSubmitted = true;
-
   }
+  onReset(){
+    this.userLoginForm.reset();
+  }
+
 
   // get city()
   // {

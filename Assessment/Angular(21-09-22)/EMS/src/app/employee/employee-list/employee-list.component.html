@@ -1,0 +1,38 @@
+<h2>Employee List</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>D.O.B</th>
+            <th>Salary</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- example purpose -->
+        <!-- <tr *ngFor="let items of usersData">
+            <td>{{items.name}}</td>
+            <td>{{items.gender}}</td>
+            <td>{{items.dob}}</td>
+            <td>{{items.salary}}</td>
+            <td>
+                <button>Details</button>
+                <button>Edit</button>
+                <button>Save</button>
+            </td>
+        </tr> -->
+        <tr *ngFor="let employeeInfo of userData">
+            <td>{{employeeInfo.name | titlecase}}</td>
+            <td>{{employeeInfo.gender | uppercase}}</td>
+            <td>{{employeeInfo.dob | date:'shortDate'}}</td>
+            <td>{{employeeInfo.salary | currency:'INR'}}</td>
+            <td>
+                <button routerLink='../details'  [queryParams]="{name:employeeInfo.name, gender:employeeInfo.gender, dob:employeeInfo.dob, salary:employeeInfo.salary}">Details</button>
+                <button (click)="Edit(employeeInfo)" >Edit</button>
+                <button (click)="Delete(employeeInfo)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
