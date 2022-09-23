@@ -1,0 +1,27 @@
+<form [formGroup]="EmpForm">
+    <div class="mb-3">
+      <label  class="form-label" >First Name:</label>
+      <input type="text" class="form-control" formGroupName="firstname">
+    </div>
+    <div class="mb-3">
+      <label  class="form-label">Last Name:</label>
+      <input type="text" class="form-control" formGroupName="lastname">
+    </div>
+    <div class="mb-3">
+      <label  class="form-label">Email address:</label>
+      <input type="email" class="form-control" formGroupName="email">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Gender:</label>
+      <input type="text" class="form-control" formGroupName="gender">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">DOB:</label>
+      <input type="date" class="form-control" formGroupName="dob">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Salary:</label>
+      <input type="text" class="form-control" formGroupName="salary">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
