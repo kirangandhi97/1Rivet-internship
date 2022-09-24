@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- <div *ngFor="let list of ListData">{{list.firstname | json}}</div>
 <p>hello list here</p> -->
 <!-- <div>{{ ListData | json}}</div> -->
@@ -21,6 +22,30 @@
             <td>{{Employees.gender}}</td>
             <td>{{Employees.DOB}}</td>
             <td>{{Employees.salary}}</td>
+=======
+<!-- <div>
+    {{ListData  | json}}
+</div> -->
+<table>
+    <thead>
+        <tr>
+            <th>firstname</th>
+            <th>firstname</th>
+            <th>firstname</th>
+            <th>firstname</th>
+            <th>firstname</th>
+            <th>firstname</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of ListData">
+            <td>{{data.firstname}}</td>
+            <td>{{data.lasttname}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.gender}}</td>
+            <td>{{data.DOB}}</td>
+            <td>{{data.salary}}</td>
+>>>>>>> 34ee321fb60431620d2208dace69cbe01a9cde4f
         </tr>
     </tbody>
 </table>
