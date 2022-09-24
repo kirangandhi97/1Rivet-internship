@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { EmployeeService } from 'src/app/services/employee.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { EmployeeService } from 'src/app/services/employee.service'
 
 @Component({
   selector: 'app-employee-list',
@@ -7,12 +7,25 @@ import { EmployeeService } from 'src/app/services/employee.service';
   styleUrls: ['./employee-list.component.scss']
 })
 export class EmployeeListComponent implements OnInit {
+  // @Input() getEmpDataFromUser:any;
 ListData:any;
-  constructor(private UserListData:EmployeeService) { }
+
+
+  constructor( private empListData:EmployeeService) {
+    // empListData.getUSer().subscribe((data:any)=>{
+    //   this.ListData = data
+    // })
+    this.getEmployeeData();
+   }
+
 
   ngOnInit(): void {
-    this.UserListData.getUSer().subscribe((data) => this.ListData = data)
-    console.log(this.ListData);
+    // this.getEmployeeData();
   }
-
+//br
+  getEmployeeData(){
+    this.empListData.getUSer().subscribe((data:any)=>{
+      this.ListData = data
+    })
+  }
 }

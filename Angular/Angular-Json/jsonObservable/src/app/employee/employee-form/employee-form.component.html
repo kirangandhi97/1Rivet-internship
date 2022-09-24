@@ -1,27 +1,28 @@
 <form [formGroup]="EmpForm">
     <div class="mb-3">
       <label  class="form-label" >First Name:</label>
-      <input type="text" class="form-control" formGroupName="firstname">
+      <input type="text" class="form-control" formControlName="firstname">
     </div>
     <div class="mb-3">
       <label  class="form-label">Last Name:</label>
-      <input type="text" class="form-control" formGroupName="lastname">
+      <input type="text" class="form-control" formControlName="lastname">
     </div>
     <div class="mb-3">
       <label  class="form-label">Email address:</label>
-      <input type="email" class="form-control" formGroupName="email">
+      <input type="email" class="form-control" formControlName="email">
     </div>
     <div class="mb-3">
       <label class="form-label">Gender:</label>
-      <input type="text" class="form-control" formGroupName="gender">
+      <input type="text" class="form-control" formControlName="gender">
     </div>
     <div class="mb-3">
       <label class="form-label">DOB:</label>
-      <input type="date" class="form-control" formGroupName="dob">
+      <input type="date" class="form-control" formControlName="DOB">
     </div>
     <div class="mb-3">
       <label class="form-label">Salary:</label>
-      <input type="text" class="form-control" formGroupName="salary">
+      <input type="text" class="form-control" formControlName="salary">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" (click)="onSubmit(EmpForm.value)">Submit</button>
   </form>
+  <!-- <app-employee-list [getEmpDataFromUser]="onSubmit(EmpForm.value)"></app-employee-list> -->

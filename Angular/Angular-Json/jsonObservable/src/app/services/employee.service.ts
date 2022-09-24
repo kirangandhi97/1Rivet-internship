@@ -9,11 +9,19 @@ public empUrl="";
 
 
   constructor(private http:HttpClient) {
-    this.empUrl = "http://localhost:3000";
+    this.empUrl = 'http://localhost:3000';
    }
 
+// get call 
 getUSer()
 {
   return this.http.get(this.empUrl + '/employee');
 }
+
+// post data 
+getDataFromServer(data:any)
+{
+  return this.http.post(this.empUrl + '/employee',data);
+}
+
 }

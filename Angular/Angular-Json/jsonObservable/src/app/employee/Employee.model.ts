@@ -5,5 +5,5 @@ export class Employee{
     gender?:string;
     DOB?:string;
     salary?:string;
-    Id?:string;
+    id?:string;
 }

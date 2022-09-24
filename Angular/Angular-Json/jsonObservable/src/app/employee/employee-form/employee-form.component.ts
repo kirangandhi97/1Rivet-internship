@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { EmployeeService } from 'src/app/services/employee.service';
 import { Employee } from '../Employee.model';
 
 @Component({
@@ -8,7 +9,8 @@ import { Employee } from '../Employee.model';
   styleUrls: ['./employee-form.component.scss']
 })
 export class EmployeeFormComponent implements OnInit {
-  public employee: Employee[];
+  // public employee: Employee[];
+  public employee:any;
   public EmpForm = this.fb.group({
     firstname:['', [Validators.required]],
     lastname:['', [Validators.required]],
@@ -16,14 +18,22 @@ export class EmployeeFormComponent implements OnInit {
     gender:['', [Validators.required]],
     DOB:['', [Validators.required]],
     salary:['', [Validators.required]],
-    Id:['', [Validators.required]],
+    id:[''],
   })
-  constructor(private fb:FormBuilder) { 
-    this.employee = [];
+  constructor(private fb:FormBuilder, private empService:EmployeeService) { 
+    // this.employee = [];
     // this.EmpForm=new FormGroup('');      lengthy way
   }
 
   ngOnInit(): void {
   }
 
+  onSubmit(data:any){
+    this.empService.getDataFromServer(data).subscribe((data:any)=>{
+      // this.employee = data;
+      console.log(data);
+    })
+    
+    
+  }
 }

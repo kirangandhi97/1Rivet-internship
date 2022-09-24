@@ -1,3 +1,26 @@
-<div>
-    {{ListData  | json}}
-</div>
+<!-- <div *ngFor="let list of ListData">{{list.firstname | json}}</div>
+<p>hello list here</p> -->
+<!-- <div>{{ ListData | json}}</div> -->
+<h3>Employee Detail List:</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>email</th>
+            <th>gender</th>
+            <th>DOB</th>
+            <th>salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Employees of ListData">
+            <td>{{Employees.firstname}}</td>
+            <td>{{Employees.lastname}}</td>
+            <td>{{Employees.email}}</td>
+            <td>{{Employees.gender}}</td>
+            <td>{{Employees.DOB}}</td>
+            <td>{{Employees.salary}}</td>
+        </tr>
+    </tbody>
+</table>
