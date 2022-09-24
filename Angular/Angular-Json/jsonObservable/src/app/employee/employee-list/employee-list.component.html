@@ -1,3 +1,25 @@
-<div>
+<!-- <div>
     {{ListData  | json}}
-</div>
+</div> -->
+<table>
+    <thead>
+        <tr>
+            <th>firstname</th>
+            <th>firstname</th>
+            <th>firstname</th>
+            <th>firstname</th>
+            <th>firstname</th>
+            <th>firstname</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of ListData">
+            <td>{{data.firstname}}</td>
+            <td>{{data.lasttname}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.gender}}</td>
+            <td>{{data.DOB}}</td>
+            <td>{{data.salary}}</td>
+        </tr>
+    </tbody>
+</table>
