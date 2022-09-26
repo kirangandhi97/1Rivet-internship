@@ -8,6 +8,7 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule  } from '@angular/common/http';
+import { EmployeeService } from '../services/employee.service';
 
 
 
@@ -30,6 +31,9 @@ import { HttpClientModule  } from '@angular/common/http';
     EmployeeFormComponent,
     EmployeeListComponent,
     EmployeeDetailsComponent
+  ],
+  providers:[
+    EmployeeService
   ]
 })
 export class EmployeeModule { }

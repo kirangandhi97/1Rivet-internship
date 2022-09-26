@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EmployeeService } from 'src/app/services/employee.service';
 import { Employee } from '../Employee.model';
 
@@ -9,31 +9,64 @@ import { Employee } from '../Employee.model';
   styleUrls: ['./employee-form.component.scss']
 })
 export class EmployeeFormComponent implements OnInit {
-  // public employee: Employee[];
-  public employee:any;
-  public EmpForm = this.fb.group({
-    firstname:['', [Validators.required]],
-    lastname:['', [Validators.required]],
-    email:['', [Validators.required]],
-    gender:['', [Validators.required]],
-    DOB:['', [Validators.required]],
-    salary:['', [Validators.required]],
-    id:[''],
-  })
-  constructor(private fb:FormBuilder, private empService:EmployeeService) { 
-    // this.employee = [];
-    // this.EmpForm=new FormGroup('');      lengthy way
+  public employee: Employee[];
+  public EmpForm: FormGroup
+  public user:any
+
+  public abc:string[];
+  constructor(private fb: FormBuilder, 
+    public empService: EmployeeService) {
+    this.employee = [];
+    this.EmpForm = this.fb.group({
+      firstname: [''],
+      lastname: [''],
+      email: [''],
+      gender: [''],
+      DOB: [''],
+      salary: [''],
+      // id: [''],
+
+    })
+    this.abc=['kk','tgdth','tdh']
   }
 
   ngOnInit(): void {
   }
 
-  onSubmit(data:any){
-    this.empService.getDataFromServer(data).subscribe((data:any)=>{
+  onSubmit() {
+      this.empService.postData(this.EmpForm.value).subscribe(data=>{
       // this.employee = data;
-      console.log(data);
-    })
-    
-    
-  }
+      this.getData();
+
+      })
+    }
+  
+//     this.empService.postData(this.EmpForm.value).subscribe((data) => {
+// this.user=data
+//       console.log(this.user);
+
+//     })
+
+getData(){
+  this.empService.getUSer().subscribe((result:any)=>{
+    this.employee=result;
+  })
 }
+
+onAdd(){
+  
+}
+
+
+
+  }
+
+  
+  // getListEmployeeFromServer(){
+  //   this.empService.getUSer().subscribe((data:any)=> 
+  //   {
+  //     this.employee = data;
+  //   })
+  // }
+
+

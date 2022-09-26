@@ -23,6 +23,7 @@
       <label class="form-label">Salary:</label>
       <input type="text" class="form-control" formControlName="salary">
     </div>
-    <button type="submit" class="btn btn-primary" (click)="onSubmit(EmpForm.value)">Submit</button>
+    <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+    <button (click)="onAdd()">Add</button>
   </form>
-  <!-- <app-employee-list [getEmpDataFromUser]="onSubmit(EmpForm.value)"></app-employee-list> -->
+  <app-employee-list [ListData]="employee"></app-employee-list>

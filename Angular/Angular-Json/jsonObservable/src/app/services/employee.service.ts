@@ -1,27 +1,42 @@
 import { Injectable } from '@angular/core';
-import { HttpClient} from '@angular/common/http'
+import { HttpClient } from '@angular/common/http'
+import { Observable } from 'rxjs';
+import { Employee } from '../employee/Employee.model';
+
+
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class EmployeeService {
-public empUrl="";
+  public empUrl: string;
 
 
-  constructor(private http:HttpClient) {
-    this.empUrl = 'http://localhost:3000';
-   }
+  constructor(private http: HttpClient) {
 
-// get call 
-getUSer()
-{
-  return this.http.get(this.empUrl + '/employee');
+    this.empUrl = 'http://localhost:3000/';
+  }
+
+  // get call 
+  getUSer(): Observable<any> {
+    return this.http.get(this.empUrl + 'employee');
+  }
+
+  // post data 
+ postData(employee:Employee[]):Observable<any>{
+  const url:string = this.empUrl + 'employee';
+  return this.http.post(url,employee)
+  // return this.http.post(this.empUrl + 'employee', employee);
+ }
+
+
+//  update data
+updateData(employee:Employee[], id:number):Observable<any>{
+  const url:string = this.empUrl + 'employee/' + id;
+  return this.http.put(url,employee);
 }
 
-// post data 
-getDataFromServer(data:any)
-{
-  return this.http.post(this.empUrl + '/employee',data);
 }
 
-}
+
