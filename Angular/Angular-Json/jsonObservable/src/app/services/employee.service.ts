@@ -23,20 +23,28 @@ export class EmployeeService {
     return this.http.get(this.empUrl + 'employee');
   }
 
+  // get data by id 
+  getUserById(id: number): Observable<any> {
+    const url: string = this.empUrl + 'employee/' + id;
+    return this.http.get(url)
+  }
+
+
   // post data 
- postData(employee:Employee[]):Observable<any>{
-  const url:string = this.empUrl + 'employee';
-  return this.http.post(url,employee)
-  // return this.http.post(this.empUrl + 'employee', employee);
- }
+  postData(employee: Employee): Observable<any> {
+    const url: string = this.empUrl + 'employee';
+    return this.http.post(url, employee)
+    // return this.http.post(this.empUrl + 'employee', employee);
+  }
 
 
-//  update data
-updateData(employee:Employee[], id:number):Observable<any>{
-  const url:string = this.empUrl + 'employee/' + id;
-  return this.http.put(url,employee);
+  //  update data
+  updateData(employee: Employee, id: number): Observable<any> {
+    const url: string = this.empUrl + 'employee/' + id;
+    return this.http.put(url, employee);
+  }
+
+  deleteData(id: number): Observable<any> {
+    return this.http.delete(`${this.empUrl}employee/${id}`);
+  }
 }
-
-}
-
-

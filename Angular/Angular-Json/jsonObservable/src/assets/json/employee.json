@@ -4,9 +4,9 @@
       "firstname": "kiran",
       "lastname": "gandhi",
       "email": "kirangandhi97@gmail.com",
-      "gender": "female",
-      "DOB": "16-02-1997",
-      "salary": "20000",
+      "gender": "f",
+      "DOB": "2022-09-22",
+      "salary": "2225",
       "id": 1
     },
     {
@@ -28,42 +28,6 @@
       "id": 3
     },
     {
-      "firstname": "wwd",
-      "lastname": "wddd",
-      "email": "wdwd",
-      "gender": "dwd",
-      "DOB": "2022-09-17",
-      "salary": "2332",
-      "id": 4
-    },
-    {
-      "firstname": "wwd",
-      "lastname": "wddd",
-      "email": "wdwd",
-      "gender": "dwd",
-      "DOB": "2022-09-17",
-      "salary": "2332",
-      "id": 5
-    },
-    {
-      "firstname": "wwd",
-      "lastname": "wddd",
-      "email": "wdwd",
-      "gender": "dwd",
-      "DOB": "2022-09-17",
-      "salary": "2332",
-      "id": 6
-    },
-    {
-      "firstname": "sxsx",
-      "lastname": "sxsx",
-      "email": "dee",
-      "gender": "rrer",
-      "DOB": "2022-09-17",
-      "salary": "ererere",
-      "id": 7
-    },
-    {
       "firstname": "yesha",
       "lastname": "gandhi",
       "email": "ihlkk",
@@ -80,33 +44,6 @@
       "DOB": "2022-09-08",
       "salary": "4234",
       "id": 9
-    },
-    {
-      "firstname": "kiran",
-      "lastname": "gandhi",
-      "email": "kirangandhi97@gmail.com",
-      "gender": "",
-      "DOB": "",
-      "salary": "",
-      "id": 10
-    },
-    {
-      "firstname": "kiran",
-      "lastname": "gandhi",
-      "email": "kirangandhi97@gmail.com",
-      "gender": "nsdgbfd",
-      "DOB": "2022-09-05",
-      "salary": "",
-      "id": 11
-    },
-    {
-      "firstname": "kiran",
-      "lastname": "gandhi",
-      "email": "kirangandhi97@gmail.com",
-      "gender": "",
-      "DOB": "",
-      "salary": "",
-      "id": 12
     },
     {
       "firstname": "kiran",
@@ -134,15 +71,6 @@
       "DOB": "2022-09-02",
       "salary": "34",
       "id": 15
-    },
-    {
-      "firstname": "kiran",
-      "lastname": "gandhi",
-      "email": "kirangandhi97@gmail.com",
-      "gender": "fffff",
-      "DOB": "2022-09-10",
-      "salary": "45454545454",
-      "id": 16
     }
   ]
 }

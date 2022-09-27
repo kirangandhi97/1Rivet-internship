@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { EmployeeService } from 'src/app/services/employee.service'
+import { Employee } from '../Employee.model';
 
 
 
@@ -9,16 +11,16 @@ import { EmployeeService } from 'src/app/services/employee.service'
   styleUrls: ['./employee-list.component.scss']
 })
 export class EmployeeListComponent implements OnInit {
-  @Input() ListData:any;
+  @Input() ListData:Employee[];
 // ListData:any;
 
 
 
-  constructor( private empListService:EmployeeService) {
+  constructor( private empListService:EmployeeService, private route: Router) {
     // empListDa]ta.getUSer().subscribe((data:any)=>{
     //   this.ListData = data
     // })
-    
+    this.ListData=[];
    }
 
 
@@ -41,7 +43,16 @@ export class EmployeeListComponent implements OnInit {
 
 
   // button click event 
-  onEdit(){
+  onEdit(employee:Employee){
+    this.route.navigate(['Employee/edit',employee.id])
     
+  }
+
+  onDelete(empId:any){
+    if (confirm('are you sure??')){
+    this.empListService.deleteData(empId).subscribe(()=>{
+      this.getEmployeeData();
+    })
+  }
   }
 }

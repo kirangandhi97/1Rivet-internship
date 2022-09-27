@@ -23,8 +23,8 @@
             <td>{{Employees.DOB}}</td>
             <td>{{Employees.salary}}</td>
             <td>
-                <button (click)="onEdit()">Edit</button>
-                <button class="btn-danger">Delete</button>
+                <button (click)="onEdit(Employees)">Edit</button>
+                <button class="btn-danger" (click)="onDelete(Employees.id)">Delete</button>
                 <button>Details</button>
             </td>
         </tr>
