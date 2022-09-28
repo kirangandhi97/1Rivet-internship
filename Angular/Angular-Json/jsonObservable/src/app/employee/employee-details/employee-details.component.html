@@ -1,1 +1,11 @@
-<p>employee-details works!</p>
+<h2>Employee Details:</h2>
+<div class="details">
+    <ul>
+        <li>Firstname: {{detailsData.firstname | titlecase}}</li>
+        <li>Lastname: {{detailsData.lastname | titlecase}}</li>
+        <li>Email: {{detailsData.email}}</li>
+        <li>Gender: {{detailsData.gender | uppercase}}</li>
+        <li>DOB: {{detailsData.DOB | date}}</li>
+        <li>Salary: {{detailsData.salary | currency:'INR'}}</li>
+    </ul>
+</div>

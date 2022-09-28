@@ -1,20 +1,11 @@
 {
   "employee": [
     {
-      "firstname": "kiran",
-      "lastname": "gandhi",
-      "email": "kirangandhi97@gmail.com",
-      "gender": "f",
-      "DOB": "2022-09-22",
-      "salary": "2225",
-      "id": 1
-    },
-    {
       "firstname": "hiral",
       "lastname": "dubal",
       "email": "hiral.dubal@gmail.com",
       "gender": "female",
-      "DOB": "02-11-1996",
+      "DOB": "2022-09-05",
       "salary": "30000",
       "id": 2
     },
@@ -23,33 +14,24 @@
       "lastname": "tandel",
       "email": "jinal.tandel@gmail.com",
       "gender": "female",
-      "DOB": "06-06-1996",
+      "DOB": "2022-09-06",
       "salary": "40000",
       "id": 3
     },
     {
-      "firstname": "yesha",
-      "lastname": "gandhi",
-      "email": "ihlkk",
-      "gender": "jjkhsbc",
-      "DOB": "2022-09-07",
-      "salary": "2324",
-      "id": 8
-    },
-    {
-      "firstname": "kiran",
-      "lastname": "gandhi",
-      "email": "kirangandhi97@gmail.com",
-      "gender": "dd",
-      "DOB": "2022-09-08",
-      "salary": "4234",
+      "firstname": "jinal",
+      "lastname": "tandel",
+      "email": "jinal.tandel@gmail.com",
+      "gender": "female",
+      "DOB": "2022-09-06",
+      "salary": "400000",
       "id": 9
     },
     {
       "firstname": "kiran",
       "lastname": "gandhi",
       "email": "kirangandhi97@gmail.com",
-      "gender": "dgjn",
+      "gender": "hhhhhh",
       "DOB": "2022-09-02",
       "salary": "24523",
       "id": 13
@@ -64,13 +46,58 @@
       "id": 14
     },
     {
-      "firstname": "hfhnsd",
-      "lastname": "fbfb",
-      "email": "gffg",
-      "gender": "gfgf",
-      "DOB": "2022-09-02",
-      "salary": "34",
+      "firstname": "sff",
+      "lastname": "",
+      "email": "",
+      "gender": "",
+      "DOB": "",
+      "salary": "",
       "id": 15
+    },
+    {
+      "firstname": "12344",
+      "lastname": null,
+      "email": null,
+      "gender": null,
+      "DOB": null,
+      "salary": null,
+      "id": 16
+    },
+    {
+      "firstname": "23456",
+      "lastname": "",
+      "email": "",
+      "gender": "",
+      "DOB": "",
+      "salary": "",
+      "id": 17
+    },
+    {
+      "firstname": "234",
+      "lastname": "",
+      "email": "",
+      "gender": "",
+      "DOB": "",
+      "salary": "",
+      "id": 18
+    },
+    {
+      "firstname": "2435",
+      "lastname": null,
+      "email": null,
+      "gender": null,
+      "DOB": null,
+      "salary": null,
+      "id": 19
+    },
+    {
+      "firstname": "2345",
+      "lastname": "",
+      "email": "",
+      "gender": "",
+      "DOB": "",
+      "salary": "",
+      "id": 20
     }
   ]
 }

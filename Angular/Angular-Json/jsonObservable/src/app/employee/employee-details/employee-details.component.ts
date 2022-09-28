@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { EmployeeService } from 'src/app/services/employee.service';
 
 @Component({
   selector: 'app-employee-details',
@@ -7,9 +9,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeDetailsComponent implements OnInit {
 
-  constructor() { }
+
+  public id: any;
+  public detailsData: any;
+
+
+  constructor(private activatedroute: ActivatedRoute, public empListService: EmployeeService) {
+
+    // console.log(activatedroute);
+    this.detailsData = [];
+    this.activatedroute.params.subscribe((p) => {
+      this.id = p['id'];
+    })
+
+    // console.log(this.id);
+
+  }
 
   ngOnInit(): void {
+
+    // console.log(this.detailsData);
+    // console.log(this.id);
+    this.getUserDetailsbyId();
+
+  }
+  getUserDetailsbyId(){
+    this.empListService.getUserById(this.id).subscribe((data) => {
+      this.detailsData = data;
+    })
   }
 
 }

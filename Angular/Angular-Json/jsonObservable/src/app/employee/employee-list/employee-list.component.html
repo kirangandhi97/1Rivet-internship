@@ -16,16 +16,16 @@
     </thead>
     <tbody>
         <tr *ngFor="let Employees of ListData">
-            <td>{{Employees.firstname}}</td>
-            <td>{{Employees.lastname}}</td>
+            <td>{{Employees.firstname | titlecase}}</td>
+            <td>{{Employees.lastname | titlecase}}</td>
             <td>{{Employees.email}}</td>
-            <td>{{Employees.gender}}</td>
-            <td>{{Employees.DOB}}</td>
-            <td>{{Employees.salary}}</td>
+            <td>{{Employees.gender | uppercase}}</td>
+            <td>{{Employees.DOB | date}}</td>
+            <td>{{Employees.salary | currency:'INR'}}</td>
             <td>
                 <button (click)="onEdit(Employees)">Edit</button>
                 <button class="btn-danger" (click)="onDelete(Employees.id)">Delete</button>
-                <button>Details</button>
+                <button (click)="onDetails(Employees)">Details</button>
             </td>
         </tr>
     </tbody>

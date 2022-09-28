@@ -1,29 +1,68 @@
 <form [formGroup]="EmpForm">
-    <div class="mb-3">
-      <label  class="form-label" >First Name:</label>
-      <input type="text" class="form-control" formControlName="firstname">
+  <div class="mb-3">
+    <label class="form-label">First Name:</label>
+    <input type="text" class="form-control" formControlName="firstname">
+    <div
+      *ngIf="EmpForm.controls['firstname'].invalid && (isSubmitted||EmpForm.controls['firstname'].dirty || EmpForm.controls['firstname'].touched)">
+      <span class="text-danger" *ngIf="EmpForm.controls['firstname'].errors?.['required']">please enter a valid
+        value</span>
+      <span class="text-danger" *ngIf="EmpForm.controls['firstname'].errors?.['minlength']">
+        minlength error
+      </span>
+      <span class="text-danger" *ngIf="EmpForm.controls['firstname'].errors?.['pattern']"> please use only
+        alphabets</span>
     </div>
-    <div class="mb-3">
-      <label  class="form-label">Last Name:</label>
-      <input type="text" class="form-control" formControlName="lastname">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Last Name:</label>
+    <input type="text" class="form-control" formControlName="lastname">
+    <div
+      *ngIf="EmpForm.controls['lastname'].invalid &&(isSubmitted||EmpForm.controls['lastname'].dirty || EmpForm.controls['lastname'].touched)">
+      <span class="text-danger" *ngIf="EmpForm.controls['lastname'].errors?.['required']">please enter a valid
+        value</span>
+      <span class="text-danger" *ngIf="EmpForm.controls['lastname'].errors?.['pattern']"> please use only
+        alphabets</span>
     </div>
-    <div class="mb-3">
-      <label  class="form-label">Email address:</label>
-      <input type="email" class="form-control" formControlName="email">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Email address:</label>
+    <input type="email" class="form-control" formControlName="email">
+    <div
+      *ngIf="EmpForm.controls['email'].invalid &&(isSubmitted||EmpForm.controls['email'].dirty || EmpForm.controls['email'].touched)">
+      <span class="text-danger" *ngIf="EmpForm.controls['email'].errors?.['required']">please enter a valid value</span>
+      <span class="text-danger" *ngIf="EmpForm.controls['email'].errors?.['pattern']"> please use only alphabets</span>
     </div>
-    <div class="mb-3">
-      <label class="form-label">Gender:</label>
-      <input type="text" class="form-control" formControlName="gender">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Gender:</label>
+    <input type="text" class="form-control" formControlName="gender">
+    <div
+      *ngIf="EmpForm.controls['gender'].invalid &&(isSubmitted||EmpForm.controls['gender'].dirty || EmpForm.controls['gender'].touched)">
+      <span class="text-danger" *ngIf="EmpForm.controls['gender'].errors?.['required']">please enter a valid
+        value</span>
+      <span class="text-danger" *ngIf="EmpForm.controls['gender'].errors?.['pattern']"> please use only alphabets</span>
     </div>
-    <div class="mb-3">
-      <label class="form-label">DOB:</label>
-      <input type="date" class="form-control" formControlName="DOB">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">DOB:</label>
+    <input type="date" class="form-control" formControlName="DOB">
+    <div
+      *ngIf="EmpForm.controls['DOB'].invalid &&(isSubmitted||EmpForm.controls['DOB'].dirty || EmpForm.controls['DOB'].touched)">
+      <span class="text-danger" *ngIf="EmpForm.controls['DOB'].errors?.['required']">please enter a valid value</span>
+      <span class="text-danger" *ngIf="EmpForm.controls['DOB'].errors?.['pattern']"> please use only alphabets</span>
     </div>
-    <div class="mb-3">
-      <label class="form-label">Salary:</label>
-      <input type="text" class="form-control" formControlName="salary">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Salary:</label>
+    <input type="text" class="form-control" formControlName="salary">
+    <div
+      *ngIf="EmpForm.controls['salary'].invalid &&(isSubmitted||EmpForm.controls['salary'].dirty || EmpForm.controls['salary'].touched)">
+      <span class="text-danger" *ngIf="EmpForm.controls['salary'].errors?.['required']">please enter a valid
+        value</span>
+      <span class="text-danger" *ngIf="EmpForm.controls['salary'].errors?.['pattern']"> please use only alphabets</span>
     </div>
-    <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
-    <!-- <button (click)="onAdd()">Add</button> -->
-  </form>
-  <app-employee-list [ListData]="employee"></app-employee-list>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+  <!-- <button (click)="onAdd()">Add</button> -->
+</form>
+<app-employee-list [ListData]="employee"></app-employee-list>

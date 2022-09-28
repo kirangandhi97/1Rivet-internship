@@ -11,48 +11,54 @@ import { Employee } from '../Employee.model';
   styleUrls: ['./employee-list.component.scss']
 })
 export class EmployeeListComponent implements OnInit {
-  @Input() ListData:Employee[];
-// ListData:any;
+  @Input() ListData: Employee[];
+  public detailsData: any;
+  // ListData:any;
 
 
 
-  constructor( private empListService:EmployeeService, private route: Router) {
+  constructor(private empListService: EmployeeService, private route: Router) {
     // empListDa]ta.getUSer().subscribe((data:any)=>{
     //   this.ListData = data
     // })
-    this.ListData=[];
-   }
+    this.ListData = [];
+    this.detailsData = {};
+  }
 
 
   ngOnInit(): void {
-  // console.log(this.ListData);
-  this.getEmployeeData();
+    // console.log(this.ListData);
+    this.getEmployeeData();
   }
-//br
-  getEmployeeData(){
-    this.empListService.getUSer().subscribe((data:any)=>{
+  //br
+  getEmployeeData() {
+    this.empListService.getUSer().subscribe((data: any) => {
       this.ListData = data
       // console.log(data);
-      
+
     })
   }
 
-  UpdateEmployee(){
+  UpdateEmployee() {
     this.empListService.updateData
   }
 
 
   // button click event 
-  onEdit(employee:Employee){
-    this.route.navigate(['Employee/edit',employee.id])
-    
+  onEdit(employee: Employee) {
+    this.route.navigate(['employee/edit', employee.id])
+
   }
 
-  onDelete(empId:any){
-    if (confirm('are you sure??')){
-    this.empListService.deleteData(empId).subscribe(()=>{
-      this.getEmployeeData();
-    })
+  onDelete(empId: any) {
+    if (confirm('are you sure??')) {
+      this.empListService.deleteData(empId).subscribe(() => {
+        this.getEmployeeData();
+      })
+    }
   }
+
+  onDetails(empl: any) {
+    this.route.navigate(['employee/details',empl.id])
   }
 }

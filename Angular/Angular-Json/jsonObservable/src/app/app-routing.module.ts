@@ -18,7 +18,7 @@ const routes: Routes = [
     component: ContactComponent
   },
   { 
-    path: 'Employee', loadChildren: () => import('./employee/employee.module').then(m => m.EmployeeModule) 
+    path: 'employee', loadChildren: () => import('./employee/employee.module').then(m => m.EmployeeModule) 
   }
 ];
 

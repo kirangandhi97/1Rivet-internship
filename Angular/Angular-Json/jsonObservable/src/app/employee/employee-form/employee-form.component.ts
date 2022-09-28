@@ -14,24 +14,26 @@ export class EmployeeFormComponent implements OnInit {
   public EmpForm: FormGroup
   public user: any
   public id: any;
+  isSubmitted:boolean=false;
 
-  public abc: string[];
+  // public abc: string[];
   constructor(private fb: FormBuilder,
     public empService: EmployeeService,
     public activatedroute: ActivatedRoute,
     public router:Router) {
     this.employee = [];
     this.EmpForm = this.fb.group({
-      firstname: [''],
-      lastname: [''],
-      email: [''],
-      gender: [''],
-      DOB: [''],
-      salary: [''],
+      firstname: ['',[Validators.required, Validators.minLength(5), Validators.pattern('[a-zA-z]*')]],
+      lastname: ['',[Validators.required, Validators.pattern('[a-zA-Z]*')]],
+      email: ['',[Validators.required, Validators.pattern('/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/')]],
+      gender: ['',[Validators.required,Validators.pattern('[a-zA-Z]*')]],
+      DOB: ['',Validators.required],
+      salary: ['',[Validators.required,Validators.pattern('[0-9]*')]],
       // id: [''],
     })
-    this.abc = ['kk', 'tgdth', 'tdh']
-    console.log(this.activatedroute);
+    // this.abc = []
+    // console.log(this.activatedroute);
+    
 
     // get id by using params 
     this.activatedroute.params.subscribe((params) => {
@@ -43,13 +45,18 @@ export class EmployeeFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
   }
 
   onSubmit() {
     // for update 
+    console.log(this.EmpForm);
+    
+    
+    this.isSubmitted=true;
     if (this.id) {
       this.updateData();
-      this.router.navigateByUrl("Employee/form");
+      this.router.navigateByUrl("employee/form");
     }
     else {
       this.empService.postData(this.EmpForm.value).subscribe(data => {
@@ -57,7 +64,7 @@ export class EmployeeFormComponent implements OnInit {
         this.getData();
       })
     }
-    this.EmpForm.reset();
+    // this.EmpForm.reset();
   }
 
   getData() {
