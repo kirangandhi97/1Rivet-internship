@@ -30,7 +30,7 @@
     <div
       *ngIf="EmpForm.controls['email'].invalid &&(isSubmitted||EmpForm.controls['email'].dirty || EmpForm.controls['email'].touched)">
       <span class="text-danger" *ngIf="EmpForm.controls['email'].errors?.['required']">please enter a valid value</span>
-      <span class="text-danger" *ngIf="EmpForm.controls['email'].errors?.['pattern']"> please use only alphabets</span>
+      <span class="text-danger" *ngIf="EmpForm.controls['email'].errors?.['pattern']"> please check your email Id</span>
     </div>
   </div>
   <div class="mb-3">
@@ -49,7 +49,6 @@
     <div
       *ngIf="EmpForm.controls['DOB'].invalid &&(isSubmitted||EmpForm.controls['DOB'].dirty || EmpForm.controls['DOB'].touched)">
       <span class="text-danger" *ngIf="EmpForm.controls['DOB'].errors?.['required']">please enter a valid value</span>
-      <span class="text-danger" *ngIf="EmpForm.controls['DOB'].errors?.['pattern']"> please use only alphabets</span>
     </div>
   </div>
   <div class="mb-3">

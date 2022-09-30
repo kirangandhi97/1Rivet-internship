@@ -46,6 +46,7 @@ export class EmployeeFormComponent implements OnInit {
     //  salary: this.employeeForm.controls['salary'].value,
     //   }
     // )
+  this.employeeForm.reset();
   }
   onReset(){
     this.employeeForm.reset();

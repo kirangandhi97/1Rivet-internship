@@ -17,12 +17,7 @@ export class EmployeeListComponent implements OnInit {
     this.employeeDelete = new EventEmitter();
 
     // for dummy data 
-    // this.userData = [
-    //   {name:'kiran', gender:'FEMALE', dob:'16-02-1997', salary:20000},
-    //   {name:'kiran', gender:'FEMALE', dob:'16-02-1997', salary:20000},
-    //   {name:'kiran', gender:'FEMALE', dob:'16-02-1997', salary:20000},
-    //   {name:'kiran', gender:'FEMALE', dob:'16-02-1997', salary:20000},
-    // ]
+   
 
 
   }
@@ -38,6 +33,12 @@ export class EmployeeListComponent implements OnInit {
     //   }
     // ]
 
+    // this.userData = [
+    //   {name:'kiran', gender:'FEMALE', dob:'16-02-1997', salary:20000},
+    //   {name:'Hiren', gender:'MALE', dob:'16-02-1997', salary:20000},
+    //   {name:'kiran', gender:'FEMALE', dob:'16-02-1997', salary:20000},
+    //   {name:'kiran', gender:'FEMALE', dob:'16-02-1997', salary:20000},
+    // ]
 
   }
   // navigateToDetails(){

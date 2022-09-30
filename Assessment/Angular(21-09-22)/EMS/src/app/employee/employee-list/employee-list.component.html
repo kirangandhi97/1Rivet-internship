@@ -25,7 +25,7 @@
         <tr *ngFor="let employeeInfo of userData">
             <td>{{employeeInfo.name | titlecase}}</td>
             <td>{{employeeInfo.gender | uppercase}}</td>
-            <td>{{employeeInfo.dob | date:'shortDate'}}</td>
+            <td>{{employeeInfo.dob | date}}</td>
             <td>{{employeeInfo.salary | currency:'INR'}}</td>
             <td>
                 <button routerLink='../details'  [queryParams]="{name:employeeInfo.name, gender:employeeInfo.gender, dob:employeeInfo.dob, salary:employeeInfo.salary}">Details</button>

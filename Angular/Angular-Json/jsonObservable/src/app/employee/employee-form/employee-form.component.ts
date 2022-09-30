@@ -25,7 +25,7 @@ export class EmployeeFormComponent implements OnInit {
     this.EmpForm = this.fb.group({
       firstname: ['',[Validators.required, Validators.minLength(5), Validators.pattern('[a-zA-z]*')]],
       lastname: ['',[Validators.required, Validators.pattern('[a-zA-Z]*')]],
-      email: ['',[Validators.required, Validators.pattern('/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/')]],
+      email: ['',Validators.required], //Validators.pattern('[a-zA-z@#0-9]*')
       gender: ['',[Validators.required,Validators.pattern('[a-zA-Z]*')]],
       DOB: ['',Validators.required],
       salary: ['',[Validators.required,Validators.pattern('[0-9]*')]],
@@ -50,21 +50,22 @@ export class EmployeeFormComponent implements OnInit {
 
   onSubmit() {
     // for update 
-    console.log(this.EmpForm);
-    
-    
+    // console.log(this.EmpForm);
     this.isSubmitted=true;
-    if (this.id) {
-      this.updateData();
-      this.router.navigateByUrl("employee/form");
+    if(this.EmpForm.valid){
+      if (this.id) {
+        this.updateData();
+        this.router.navigateByUrl("employee/form");
+      }
+      else {
+        this.empService.postData(this.EmpForm.value).subscribe(data => {
+          // this.employee = data;
+          this.getData();
+          // this.router.navigateByUrl("employee/form");
+        })
+      }
     }
-    else {
-      this.empService.postData(this.EmpForm.value).subscribe(data => {
-        // this.employee = data;
-        this.getData();
-      })
-    }
-    // this.EmpForm.reset();
+    
   }
 
   getData() {
