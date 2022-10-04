@@ -33,7 +33,7 @@ import { EmployeeService } from '../services/employee.service';
     EmployeeDetailsComponent
   ],
   providers:[
-    EmployeeService
+    // EmployeeService
   ]
 })
 export class EmployeeModule { }

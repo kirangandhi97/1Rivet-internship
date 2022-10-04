@@ -59,6 +59,6 @@ export class EmployeeListComponent implements OnInit {
   }
 
   onDetails(empl: any) {
-    this.route.navigate(['employee/details',empl.id])
+    this.route.navigate(['employee/details', empl.id])
   }
 }
