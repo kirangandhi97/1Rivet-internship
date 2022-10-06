@@ -24,7 +24,8 @@ const routes: Routes = [
   {
     path:'observable',
     component:ObservableComponent
-  }
+  },
+  { path: 'students', loadChildren: () => import('./students/students.module').then(m => m.StudentsModule) }
 ];
 
 @NgModule({

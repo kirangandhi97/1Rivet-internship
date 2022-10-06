@@ -52,6 +52,7 @@ export class EmployeeFormComponent implements OnInit {
     // for update 
     // console.log(this.EmpForm);
     this.isSubmitted=true;
+    // debugger
     if(this.EmpForm.valid){
       if (this.id) {
         this.updateData();

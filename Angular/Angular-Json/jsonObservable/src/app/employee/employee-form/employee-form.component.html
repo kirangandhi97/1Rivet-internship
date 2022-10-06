@@ -6,11 +6,12 @@
       *ngIf="EmpForm.controls['firstname'].invalid && (isSubmitted||EmpForm.controls['firstname'].dirty || EmpForm.controls['firstname'].touched)">
       <span class="text-danger" *ngIf="EmpForm.controls['firstname'].errors?.['required']">please enter a valid
         value</span>
+        <span class="text-danger" *ngIf="EmpForm.controls['firstname'].errors?.['pattern']"> please use only
+          alphabets</span>
       <span class="text-danger" *ngIf="EmpForm.controls['firstname'].errors?.['minlength']">
         minlength error
       </span>
-      <span class="text-danger" *ngIf="EmpForm.controls['firstname'].errors?.['pattern']"> please use only
-        alphabets</span>
+      
     </div>
   </div>
   <div class="mb-3">

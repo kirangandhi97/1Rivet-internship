@@ -1,0 +1,57 @@
+<form>
+    <div class="mb-3">
+      <label class="form-label">Name:</label>
+      <input type="text" class="form-control">
+      <!-- <div
+        *ngIf="EmpForm.controls['firstname'].invalid && (isSubmitted||EmpForm.controls['firstname'].dirty || EmpForm.controls['firstname'].touched)">
+        <span class="text-danger" *ngIf="EmpForm.controls['firstname'].errors?.['required']">please enter a valid
+          value</span>
+          <span class="text-danger" *ngIf="EmpForm.controls['firstname'].errors?.['pattern']"> please use only
+            alphabets</span>
+        <span class="text-danger" *ngIf="EmpForm.controls['firstname'].errors?.['minlength']">
+          minlength error
+        </span>
+        
+      </div> -->
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Gender:</label>
+      <input type="text" class="form-control">
+      <!-- <div
+        *ngIf="EmpForm.controls['lastname'].invalid &&(isSubmitted||EmpForm.controls['lastname'].dirty || EmpForm.controls['lastname'].touched)">
+        <span class="text-danger" *ngIf="EmpForm.controls['lastname'].errors?.['required']">please enter a valid
+          value</span>
+        <span class="text-danger" *ngIf="EmpForm.controls['lastname'].errors?.['pattern']"> please use only
+          alphabets</span>
+      </div> -->
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Email:</label>
+      <input type="email" class="form-control">
+      <!-- <div
+        *ngIf="EmpForm.controls['email'].invalid &&(isSubmitted||EmpForm.controls['email'].dirty || EmpForm.controls['email'].touched)">
+        <span class="text-danger" *ngIf="EmpForm.controls['email'].errors?.['required']">please enter a valid value</span>
+        <span class="text-danger" *ngIf="EmpForm.controls['email'].errors?.['pattern']"> please check your email Id</span>
+      </div> -->
+    </div>
+    <div class="mb-3">
+      <label class="form-label">DOB:</label>
+      <input type="date" class="form-control">
+      <!-- <div
+        *ngIf="EmpForm.controls['DOB'].invalid &&(isSubmitted||EmpForm.controls['DOB'].dirty || EmpForm.controls['DOB'].touched)">
+        <span class="text-danger" *ngIf="EmpForm.controls['DOB'].errors?.['required']">please enter a valid value</span>
+      </div> -->
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Contact:</label>
+      <input type="text" class="form-control" >
+      <!-- <div
+        *ngIf="EmpForm.controls['salary'].invalid &&(isSubmitted||EmpForm.controls['salary'].dirty || EmpForm.controls['salary'].touched)">
+        <span class="text-danger" *ngIf="EmpForm.controls['salary'].errors?.['required']">please enter a valid
+          value</span>
+        <span class="text-danger" *ngIf="EmpForm.controls['salary'].errors?.['pattern']"> please use only alphabets</span>
+      </div> -->
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+    <!-- <button (click)="onAdd()">Add</button> -->
+  </form>
