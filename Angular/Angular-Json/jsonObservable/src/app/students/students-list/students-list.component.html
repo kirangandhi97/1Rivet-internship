@@ -15,12 +15,21 @@
             <td>{{student.name}}</td>
             <td>{{student.gender}}</td>
             <td>{{student.email}}</td>
-            <td>{{student.dob | date:'mediumDate'}}</td>
+            <td>{{student.dob}}</td>
             <td>{{student.phone}}</td>
             <td>
-                <a class="me-2" [routerLink]="['edit', student.id]">Edit</a>
+                <!-- using anchor link  -->
+                <!-- <a class="me-2" [routerLink]="['edit', student.id]">Edit</a>
                 <a class="text-danger me-2" [routerLink]="['delete', student.id]">Delete</a>
-                <a [routerLink]="['details', student.id]">Details</a>
+                <a [routerLink]="['details', student.id]">Details</a> -->
+
+                <!-- using button  -->
+
+                <button (click)="onEdit(student.id)">Edit</button>
+                <button (click)="onDelete()">Delete</button>
+                <!-- <button (click)="onDetails(student.id)">Details</button> -->
+                <button class="btn-primary" [routerLink]="['../student-details',student.id]">Details</button>
+
             </td>
         </tr>
     </tbody>

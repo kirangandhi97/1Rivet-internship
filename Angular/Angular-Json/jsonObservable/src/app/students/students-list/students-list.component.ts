@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { StudentsService } from '../service/students.service';
 import { Students } from '../Students.model';
 
@@ -9,12 +10,14 @@ import { Students } from '../Students.model';
 })
 export class StudentsListComponent implements OnInit {
   studentData: Students[] = [];
-  constructor(private studentService:StudentsService) { }
+  constructor(private studentService:StudentsService, private router:Router) { }
 
   ngOnInit(): void {
     this.getAllStudents()
   }
 
+
+// get all the student details function 
   getAllStudents(){
     this.studentService.getStudents().subscribe((data)=>
     {
@@ -23,4 +26,19 @@ export class StudentsListComponent implements OnInit {
       
     })
   }
+
+
+// on click events 
+onEdit(id:any){
+this.router.navigate(['edit',id])
+console.log(id);
+
+}
+
+onDelete(){}
+
+// onDetails(id : any){
+//   this.router.navigate(['details',id]);
+// }
+
 }

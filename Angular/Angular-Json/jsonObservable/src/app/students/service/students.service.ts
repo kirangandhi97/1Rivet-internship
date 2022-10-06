@@ -15,6 +15,11 @@ baseUrl:string='';
     return this.http.get(this.baseUrl);
   }
 
+  // get student details by id 
+  getStudentDetailsbyId(id:number):Observable<any>{
+    return this.http.get(this.baseUrl+id);
+  }
+
   postStudents(students:Students):Observable<any>{
     return this.http.post(this.baseUrl, students);
   }
