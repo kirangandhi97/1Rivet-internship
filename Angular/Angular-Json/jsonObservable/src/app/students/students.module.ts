@@ -8,6 +8,7 @@ import { StudentsListComponent } from './students-list/students-list.component';
 import { StudentsDetailsComponent } from './students-details/students-details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StudentsDeleteComponent } from './students-delete/students-delete.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { StudentsDeleteComponent } from './students-delete/students-delete.compo
   imports: [
     CommonModule,
     StudentsRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ]
 })
 export class StudentsModule { }

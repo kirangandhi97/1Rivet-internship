@@ -25,7 +25,8 @@
 
                 <!-- using button  -->
 
-                <button (click)="onEdit(student.id)">Edit</button>
+                <!-- <button (click)="onEdit(student.id)">Edit</button> -->
+                <button (click)="onEdit(student)">Edit</button>
                 <button (click)="onDelete()">Delete</button>
                 <!-- <button (click)="onDetails(student.id)">Details</button> -->
                 <button class="btn-primary" [routerLink]="['../student-details',student.id]">Details</button>

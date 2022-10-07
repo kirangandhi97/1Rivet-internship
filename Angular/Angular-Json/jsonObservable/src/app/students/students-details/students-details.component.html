@@ -1,1 +1,9 @@
-<p>students-details works!</p>
+
+<h3 >Student Details</h3>
+<div *ngIf="studentDetails" class="m-auto">
+    <p>Name: {{studentDetails.name}}</p>
+    <p>Gender: {{studentDetails.gender}}</p>
+    <p>Email: {{studentDetails.email}}</p>
+    <p>DOB: {{studentDetails.dob}}</p>
+    <p>Contact: {{studentDetails.phone}}</p>
+</div>

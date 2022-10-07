@@ -9,6 +9,7 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule  } from '@angular/common/http';
 import { EmployeeService } from '../services/employee.service';
+import { AlphabetOnlyDirective } from './alphabet-only.directive';
 
 
 
@@ -18,7 +19,8 @@ import { EmployeeService } from '../services/employee.service';
     EmployeeComponent,
     EmployeeFormComponent,
     EmployeeListComponent,
-    EmployeeDetailsComponent
+    EmployeeDetailsComponent,
+    AlphabetOnlyDirective
   ],
   imports: [
     CommonModule,

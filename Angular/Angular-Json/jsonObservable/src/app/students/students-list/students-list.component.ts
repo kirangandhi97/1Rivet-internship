@@ -29,10 +29,16 @@ export class StudentsListComponent implements OnInit {
 
 
 // on click events 
-onEdit(id:any){
-this.router.navigate(['edit',id])
-console.log(id);
 
+// on edit function 
+
+// onEdit(id:any){
+// this.router.navigate(['../students/student-edit',id])
+// // console.log(student.id);
+// }
+onEdit(student:Students){
+this.router.navigate(['../students/student-edit',student.id])
+// console.log(student.id);
 }
 
 onDelete(){}

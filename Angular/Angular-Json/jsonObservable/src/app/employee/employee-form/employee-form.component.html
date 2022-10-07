@@ -1,16 +1,23 @@
 <form [formGroup]="EmpForm">
   <div class="mb-3">
     <label class="form-label">First Name:</label>
-    <input type="text" class="form-control" formControlName="firstname">
+    <input type="text" class="form-control" formControlName="firstname" appAlphabetOnly>
     <div
       *ngIf="EmpForm.controls['firstname'].invalid && (isSubmitted||EmpForm.controls['firstname'].dirty || EmpForm.controls['firstname'].touched)">
-      <span class="text-danger" *ngIf="EmpForm.controls['firstname'].errors?.['required']">please enter a valid
+      <!-- <span class="text-danger" *ngIf="EmpForm.controls['firstname'].errors?.['required']">please enter a valid
         value</span>
         <span class="text-danger" *ngIf="EmpForm.controls['firstname'].errors?.['pattern']"> please use only
           alphabets</span>
-      <span class="text-danger" *ngIf="EmpForm.controls['firstname'].errors?.['minlength']">
+      <span class="text-danger" *ngIf="EmpForm.controls['firstname'].errors?.['pattern'] || EmpForm.controls['firstname'].errors?.['minlength']">
         minlength error
-      </span>
+      </span> -->
+      <div *ngIf="EmpForm.controls['firstname'].errors?.['required']">
+        First Name is required.
+      </div>
+      <div *ngIf="EmpForm.controls['firstname'].errors?.['minlength']">
+        Fisrt Name must be at least 4 characters long.
+      </div>
+
       
     </div>
   </div>

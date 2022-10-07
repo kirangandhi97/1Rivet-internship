@@ -27,10 +27,13 @@ export class EmployeeDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
-    // console.log(this.detailsData);
-    // console.log(this.id);
     this.getUserDetailsbyId();
+    // setTimeout(() => {
+     
+      
+    //   console.log(this.detailsData);
+    //   console.log(this.id);
+    // }, 5000);
 
   }
   getUserDetailsbyId(){

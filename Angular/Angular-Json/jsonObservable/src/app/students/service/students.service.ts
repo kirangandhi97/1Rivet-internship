@@ -9,7 +9,7 @@ import { Students } from '../Students.model';
 export class StudentsService {
 baseUrl:string='';
   constructor(private http:HttpClient) { 
-    this.baseUrl = "http://localhost:3000/students"
+    this.baseUrl = "http://localhost:3000/students/"
   }
   getStudents():Observable<any>{
     return this.http.get(this.baseUrl);
@@ -22,5 +22,9 @@ baseUrl:string='';
 
   postStudents(students:Students):Observable<any>{
     return this.http.post(this.baseUrl, students);
+  }
+
+  updateStudents(student:Students, id:number):Observable<any>{
+    return this.http.put(this.baseUrl,student);
   }
 }

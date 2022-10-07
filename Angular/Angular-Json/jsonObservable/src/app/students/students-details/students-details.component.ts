@@ -20,22 +20,25 @@ export class StudentsDetailsComponent implements OnInit {
     });
 
     console.log(this.activatedRoute);
-    
+
   }
 
   ngOnInit(): void {
-    
+    this.getDatabyId();
+
+    // can print using set-time-out work asynchronous
     // console.log(this.studentId);
     // console.log(this.studentDetails); 
-    this.getStudentDetailsById();
-    
+  
   }
 
-  getStudentDetailsById() {
+  getDatabyId() {
     this.studentsService
       .getStudentDetailsbyId(this.studentId)
       .subscribe((data) => {
         this.studentDetails = data;
+        // console.log(this.studentDetails);
+        
       });
   }
 }

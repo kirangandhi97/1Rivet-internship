@@ -19,7 +19,7 @@ const routes: Routes = [
         component: StudentsFormComponent,
       },
       {
-        path: 'edit/:id',
+        path: 'student-edit/:id',
         component: StudentsFormComponent,
       },
       {

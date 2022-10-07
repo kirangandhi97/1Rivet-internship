@@ -46,6 +46,7 @@ export class EmployeeListComponent implements OnInit {
 
   // button click event 
   onEdit(employee: Employee) {
+  
     this.route.navigate(['employee/edit', employee.id])
 
   }

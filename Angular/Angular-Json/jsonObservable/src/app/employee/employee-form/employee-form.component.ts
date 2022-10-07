@@ -23,7 +23,7 @@ export class EmployeeFormComponent implements OnInit {
     public router:Router) {
     this.employee = [];
     this.EmpForm = this.fb.group({
-      firstname: ['',[Validators.required, Validators.minLength(5), Validators.pattern('[a-zA-z]*')]],
+      firstname: ['',[Validators.required, Validators.minLength(5), Validators.maxLength(10), Validators.pattern('[a-zA-z]*')]],
       lastname: ['',[Validators.required, Validators.pattern('[a-zA-Z]*')]],
       email: ['',Validators.required], //Validators.pattern('[a-zA-z@#0-9]*')
       gender: ['',[Validators.required,Validators.pattern('[a-zA-Z]*')]],
@@ -39,8 +39,10 @@ export class EmployeeFormComponent implements OnInit {
     this.activatedroute.params.subscribe((params) => {
       this.id = params['id']
     })
+  
     if (this.id) {
-      this.DataById();
+
+      this.DataById(this.id);
     }
   }
 
@@ -76,8 +78,8 @@ export class EmployeeFormComponent implements OnInit {
   }
 
 
-  DataById() {
-    this.empService.getUserById(this.id).subscribe((employee) => {
+  DataById(id:any) {
+    this.empService.getUserById(id).subscribe((employee) => {
       this.EmpForm.patchValue(employee);
     })
   }
