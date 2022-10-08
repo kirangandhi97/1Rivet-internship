@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { StudentsDetailsComponent } from './students-details/students-details.component';
 import { StudentsFormComponent } from './students-form/students-form.component';
+import { StudentsListComponent } from './students-list/students-list.component';
 import { StudentsComponent } from './students.component';
 
 const routes: Routes = [
@@ -12,11 +13,15 @@ const routes: Routes = [
       {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'student-form',
+        redirectTo: 'student-list',
       },
       {
         path: 'student-form',
         component: StudentsFormComponent,
+      },
+      {
+        path:'student-list',
+        component:StudentsListComponent,
       },
       {
         path: 'student-edit/:id',
@@ -24,7 +29,7 @@ const routes: Routes = [
       },
       {
         path: 'delete/:id',
-        component: StudentsFormComponent,
+        component: StudentsListComponent,
       },
       {
         path: 'student-details/:id',

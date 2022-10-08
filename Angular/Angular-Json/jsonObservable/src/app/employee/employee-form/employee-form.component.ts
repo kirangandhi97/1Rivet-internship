@@ -42,7 +42,7 @@ export class EmployeeFormComponent implements OnInit {
   
     if (this.id) {
 
-      this.DataById(this.id);
+      this.DataById();
     }
   }
 
@@ -78,8 +78,8 @@ export class EmployeeFormComponent implements OnInit {
   }
 
 
-  DataById(id:any) {
-    this.empService.getUserById(id).subscribe((employee) => {
+  DataById() {
+    this.empService.getUserById(this.id).subscribe((employee) => {
       this.EmpForm.patchValue(employee);
     })
   }

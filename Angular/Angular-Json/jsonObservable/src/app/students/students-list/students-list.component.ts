@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { StudentsService } from '../service/students.service';
 import { Students } from '../Students.model';
 
@@ -36,8 +36,8 @@ export class StudentsListComponent implements OnInit {
 // this.router.navigate(['../students/student-edit',id])
 // // console.log(student.id);
 // }
-onEdit(student:Students){
-this.router.navigate(['../students/student-edit',student.id])
+onEdit(id:any){
+this.router.navigate(['../students/student-edit',id])
 // console.log(student.id);
 }
 
@@ -46,5 +46,9 @@ onDelete(){}
 // onDetails(id : any){
 //   this.router.navigate(['details',id]);
 // }
+
+onAddNew(){
+  this.router.navigate(['students/student-form'])
+}
 
 }

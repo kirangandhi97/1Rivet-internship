@@ -1,4 +1,6 @@
-<form [formGroup]="studentForm">
+<button (click)="onListClick()">Student List</button>
+
+<form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
     <div class="mb-3">
       <label class="form-label">Name:</label>
       <input type="text" class="form-control" formControlName="name">
@@ -52,7 +54,6 @@
         <span class="text-danger" *ngIf="EmpForm.controls['salary'].errors?.['pattern']"> please use only alphabets</span>
       </div> -->
     </div>
-    <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
     <!-- <button (click)="onAdd()">Add</button> -->
   </form>
-  <app-students-list></app-students-list>

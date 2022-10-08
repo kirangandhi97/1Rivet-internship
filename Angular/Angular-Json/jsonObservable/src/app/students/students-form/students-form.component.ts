@@ -1,34 +1,36 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { StudentsService } from '../service/students.service';
 import { Students } from '../Students.model';
 
 @Component({
   selector: 'app-students-form',
   templateUrl: './students-form.component.html',
-  styleUrls: ['./students-form.component.scss']
+  styleUrls: ['./students-form.component.scss'],
 })
 export class StudentsFormComponent implements OnInit {
-  public studentForm:FormGroup;
-  public studentFormData:any;
-id:any;
-  constructor(private studentService:StudentsService, private activatedRoute:ActivatedRoute, private fb:FormBuilder) { 
-    this.activatedRoute.params.subscribe((params)=>
-    {
+  public studentForm: FormGroup;
+  public studentFormData: Students[] = [];
+  id: any;
+  constructor(
+    private studentService: StudentsService,
+    private activatedRoute: ActivatedRoute,
+    private fb: FormBuilder,
+    private router: Router
+  ) {
+    this.activatedRoute.params.subscribe((params) => {
       this.id = params['id'];
-      this.getEditbyId()   
-    })
+      this.editById();
+    });
 
     this.studentForm = this.fb.group({
-      name:['', Validators.required],
-      gender:['', Validators.required],
-      email:['', Validators.required],
-      dob:['', Validators.required],
-      phone:['', Validators.required]
-    })
-    
-    
+      name: ['', Validators.required],
+      gender: ['', Validators.required],
+      email: ['', Validators.required],
+      dob: ['', Validators.required],
+      phone: ['', Validators.required],
+    });
   }
 
   ngOnInit(): void {
@@ -38,28 +40,45 @@ id:any;
     // this.getEditbyId()
   }
 
-  onSubmit(){
-    
+  onSubmit() {
+  if(this.studentForm.valid){
+    if(this.id){
+      this.updateData();
+    }
+    else{
+      this.createStudent();
+    }
+  }
   }
 
-  // getStudentsData(){
-  //   this.studentService.getStudents().
+  getStudentsData() {
+    this.studentService.getStudents().subscribe(() => {});
+  }
 
-  //   });
-  // }
+  createStudent() {
+    this.studentService.createStudents(this.studentForm.value).subscribe((result) => {
+        alert('successfully saved.')
+      });
+      //  this.getStudentsData();
+      this.router.navigate(['students/student-list'])
+  }
 
-  getEditbyId(){
-    this.studentService.getStudentDetailsbyId(Number(this.id)).subscribe((data)=>{
+  editById() {
+    this.studentService.getStudentDetailsbyId(this.id).subscribe((data) => {
       this.studentForm.patchValue(data);
-      console.log(data);
-      // this.studentFormData = data;
-    })
+    });
   }
 
-  // updateData(){
-  //   this.studentService.updateStudents(this.studentForm.value,this.id).subscribe(()=>
-  //   {
-  //     // this.getStudentsData();
-  //   })
-  // }
+  updateData() {
+    this.studentService
+      .updateStudents(this.studentForm.value, this.id)
+      .subscribe(() => {
+        this.getStudentsData();
+      });
+  }
+
+  // navigation
+  onListClick() {
+    this.router.navigate(['students/student-list']);
+  }
 }

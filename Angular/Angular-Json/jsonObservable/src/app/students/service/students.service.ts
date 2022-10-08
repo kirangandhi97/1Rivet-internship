@@ -11,20 +11,20 @@ baseUrl:string='';
   constructor(private http:HttpClient) { 
     this.baseUrl = "http://localhost:3000/students/"
   }
-  getStudents():Observable<any>{
-    return this.http.get(this.baseUrl);
+  getStudents():Observable<Students[]>{
+    return this.http.get<Students[]>(this.baseUrl);
   }
 
   // get student details by id 
-  getStudentDetailsbyId(id:number):Observable<any>{
-    return this.http.get(this.baseUrl+id);
+  getStudentDetailsbyId(id:number):Observable<Students>{
+    return this.http.get<Students>(this.baseUrl+id);
   }
 
-  postStudents(students:Students):Observable<any>{
-    return this.http.post(this.baseUrl, students);
+  createStudents(students:Students):Observable<Students>{
+    return this.http.post<Students>(this.baseUrl, students);
   }
 
-  updateStudents(student:Students, id:number):Observable<any>{
-    return this.http.put(this.baseUrl,student);
+  updateStudents(student:Students, id:number):Observable<Students>{
+    return this.http.put<Students>(this.baseUrl,student);
   }
 }

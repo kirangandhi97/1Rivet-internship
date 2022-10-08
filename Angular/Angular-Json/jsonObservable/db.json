@@ -1,97 +1,166 @@
-
 {
-    "employee": [
-        {
-          "firstname": "hiral",
-          "lastname": "dubal",
-          "email": "hiral.dubal@gmail.com",
-          "gender": "female",
-          "DOB": "2022-09-05",
-          "salary": "3000",
-          "id": 2
-        },
-        {
-          "firstname": "jinal",
-          "lastname": "tandel",
-          "email": "jinal.tandel@gmail.com",
-          "gender": "female",
-          "DOB": "2022-09-06",
-          "salary": "40000",
-          "id": 3
-        },
-        {
-          "firstname": "jinal",
-          "lastname": "tandel",
-          "email": "jinal.tandel@gmail.com",
-          "gender": "female",
-          "DOB": "2022-09-06",
-          "salary": "400000",
-          "id": 9
-        },
-        {
-          "firstname": "kiran",
-          "lastname": "gandhi",
-          "email": "kirangandhi97@gmail.com",
-          "gender": "hhhhhh",
-          "DOB": "2022-09-02",
-          "salary": "24523",
-          "id": 13
-        },
-        {
-          "firstname": "kiran",
-          "lastname": "gandhi",
-          "email": "kirangandhi97@gmail.com",
-          "gender": "mhf",
-          "DOB": "2022-09-08",
-          "salary": "656",
-          "id": 14
-        },
-        {
-          "firstname": "yesha",
-          "lastname": "gandhi",
-          "email": "yesha.gandhi@gmail.com",
-          "gender": "female",
-          "DOB": "2022-09-13",
-          "salary": "2334456",
-          "id": 16
-        },
-        {
-          "firstname": "kiran",
-          "lastname": "gandhi",
-          "email": "kirangandhi97@gmail.com",
-          "gender": "xbfb",
-          "DOB": "2022-09-01",
-          "salary": "2000",
-          "id": 19
-        },
-        {
-          "firstname": "nirav",
-          "lastname": "patel",
-          "email": "nikunj.patel@gmail.com",
-          "gender": "male",
-          "DOB": "2022-10-10",
-          "salary": "3232464",
-          "id": 21
-        }
-      ],
-
-      
-    "students": [
-        {
-            "name":"kiran",
-            "gender":"female",
-            "email":"kirangandhi@gmail.com",
-            "dob":"16-02-1997",
-            "phone":"9639825378",
-            "id":1
-        },
-        {
-            "name":"yesha",
-            "gender":"female",
-            "email":"yeshagandhi@gmail.com",
-            "dob":"10-03-1999",
-            "phone":"9639825378",
-            "id":2
-        }
-    ]
+  "employee": [
+    {
+      "firstname": "hiral",
+      "lastname": "dubal",
+      "email": "hiral.dubal@gmail.com",
+      "gender": "female",
+      "DOB": "2022-09-05",
+      "salary": "3000",
+      "id": 2
+    },
+    {
+      "firstname": "jinal",
+      "lastname": "tandel",
+      "email": "jinal.tandel@gmail.com",
+      "gender": "female",
+      "DOB": "2022-09-06",
+      "salary": "40000",
+      "id": 3
+    },
+    {
+      "firstname": "jinal",
+      "lastname": "tandel",
+      "email": "jinal.tandel@gmail.com",
+      "gender": "female",
+      "DOB": "2022-09-06",
+      "salary": "400000",
+      "id": 9
+    },
+    {
+      "firstname": "kiran",
+      "lastname": "gandhi",
+      "email": "kirangandhi97@gmail.com",
+      "gender": "hhhhhh",
+      "DOB": "2022-09-02",
+      "salary": "24523",
+      "id": 13
+    },
+    {
+      "firstname": "kiran",
+      "lastname": "gandhi",
+      "email": "kirangandhi97@gmail.com",
+      "gender": "mhf",
+      "DOB": "2022-09-08",
+      "salary": "656",
+      "id": 14
+    },
+    {
+      "firstname": "yesha",
+      "lastname": "gandhi",
+      "email": "yesha.gandhi@gmail.com",
+      "gender": "female",
+      "DOB": "2022-09-13",
+      "salary": "2334456",
+      "id": 16
+    },
+    {
+      "firstname": "kiran",
+      "lastname": "gandhi",
+      "email": "kirangandhi97@gmail.com",
+      "gender": "xbfb",
+      "DOB": "2022-09-01",
+      "salary": "2000",
+      "id": 19
+    },
+    {
+      "firstname": "nirav",
+      "lastname": "patel",
+      "email": "nikunj.patel@gmail.com",
+      "gender": "male",
+      "DOB": "2022-10-10",
+      "salary": "3232464",
+      "id": 21
+    }
+  ],
+  "students": [
+    {
+      "name": "kiran",
+      "gender": "female",
+      "email": "kirangandhi@gmail.com",
+      "dob": "16-02-1997",
+      "phone": "9639825378",
+      "id": 1
+    },
+    {
+      "name": "yesha",
+      "gender": "female",
+      "email": "yeshagandhi@gmail.com",
+      "dob": "10-03-1999",
+      "phone": "9639825378",
+      "id": 2
+    },
+    {
+      "name": "fgjfgjfg",
+      "gender": "gg",
+      "email": "fdgg@gmail.com",
+      "dob": "2022-10-12",
+      "phone": "23456646",
+      "id": 3
+    },
+    {
+      "name": "hiren g",
+      "gender": "m",
+      "email": "hiren.g@gmail.com",
+      "dob": "2022-10-12",
+      "phone": "2345788",
+      "id": 4
+    },
+    {
+      "name": "nggjgjg",
+      "gender": "f",
+      "email": "ffhgg@gmail.com",
+      "dob": "2022-10-06",
+      "phone": "3435335",
+      "id": 5
+    },
+    {
+      "name": "disha",
+      "gender": "f",
+      "email": "disha.23@gmail.com",
+      "dob": "2022-10-03",
+      "phone": "2325647",
+      "id": 6
+    },
+    {
+      "name": "kiran",
+      "gender": "female",
+      "email": "kirangandhi@gmail.com",
+      "dob": "16-02-1997",
+      "phone": "963982537833",
+      "id": 7
+    },
+    {
+      "name": "kiran gg",
+      "gender": "female",
+      "email": "kirangandhi@gmail.com",
+      "dob": "16-02-1997",
+      "phone": "9639825378",
+      "id": 8
+    },
+    {
+      "name": "kiranvv",
+      "gender": "female",
+      "email": "kirangandhi@gmail.com",
+      "dob": "16-02-1997",
+      "phone": "9639825378",
+      "id": 9
+    },
+    {
+      "name": "kiranss",
+      "gender": "female",
+      "email": "kirangandhi@gmail.com",
+      "dob": "16-02-1997",
+      "phone": "9639825378",
+      "id": 10
+    },
+    {
+      "name": "bfnncv",
+      "gender": "vn",
+      "email": "vbccncgn@gmail.com",
+      "dob": "2022-10-12",
+      "phone": "33535366",
+      "id": 11
+    }
+  ]
 }
