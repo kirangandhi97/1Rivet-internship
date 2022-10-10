@@ -10,7 +10,9 @@ import { Students } from '../Students.model';
 })
 export class StudentsListComponent implements OnInit {
   studentData: Students[] = [];
-  constructor(private studentService:StudentsService, private router:Router) { }
+  public id : any;
+  constructor(private studentService:StudentsService, private router:Router) { 
+  }
 
   ngOnInit(): void {
     this.getAllStudents()
@@ -31,17 +33,18 @@ export class StudentsListComponent implements OnInit {
 // on click events 
 
 // on edit function 
-
-// onEdit(id:any){
-// this.router.navigate(['../students/student-edit',id])
-// // console.log(student.id);
-// }
-onEdit(id:any){
+onEdit(id:number){
 this.router.navigate(['../students/student-edit',id])
 // console.log(student.id);
 }
 
-onDelete(){}
+onDelete(id:number){
+  if (confirm('Are tou sure you want to delete this data??')){
+    this.studentService.deleteStudents(id).subscribe(()=>{
+      this.getAllStudents();
+    })
+  }
+}
 
 // onDetails(id : any){
 //   this.router.navigate(['details',id]);

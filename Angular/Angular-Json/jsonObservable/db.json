@@ -78,7 +78,7 @@
       "name": "kiran",
       "gender": "female",
       "email": "kirangandhi@gmail.com",
-      "dob": "16-02-1997",
+      "dob": "2022-10-14",
       "phone": "9639825378",
       "id": 1
     },
@@ -86,7 +86,7 @@
       "name": "yeshass",
       "gender": "female",
       "email": "yeshagandhi@gmail.com",
-      "dob": "10-03-1999",
+      "dob": "2022-10-20",
       "phone": "9639825378",
       "id": 2
     },
@@ -99,76 +99,28 @@
       "id": 3
     },
     {
-      "name": "hiren g",
-      "gender": "m",
-      "email": "hiren.g@gmail.com",
+      "name": "bhargav",
+      "gender": "male",
+      "email": "nhargav.p@gmail.com",
+      "dob": "2022-10-13",
+      "phone": "243353667",
+      "id": 13
+    },
+    {
+      "name": "mittal",
+      "gender": "female",
+      "email": "mittal123@gmail.com",
       "dob": "2022-10-12",
-      "phone": "2345788",
-      "id": 4
+      "phone": "23242555",
+      "id": 14
     },
     {
-      "name": "nggjgjg",
-      "gender": "f",
-      "email": "ffhgg@gmail.com",
-      "dob": "2022-10-06",
-      "phone": "3435335",
-      "id": 5
-    },
-    {
-      "name": "disha",
-      "gender": "f",
-      "email": "disha.23@gmail.com",
-      "dob": "2022-10-03",
-      "phone": "2325647",
-      "id": 6
-    },
-    {
-      "name": "kiran",
-      "gender": "female",
-      "email": "kirangandhi@gmail.com",
-      "dob": "16-02-1997",
-      "phone": "963982537833",
-      "id": 7
-    },
-    {
-      "name": "kiran gg",
-      "gender": "female",
-      "email": "kirangandhi@gmail.com",
-      "dob": "16-02-1997",
-      "phone": "9639825378",
-      "id": 8
-    },
-    {
-      "name": "kiranvv",
-      "gender": "female",
-      "email": "kirangandhi@gmail.com",
-      "dob": "16-02-1997",
-      "phone": "9639825378",
-      "id": 9
-    },
-    {
-      "name": "kiranss",
-      "gender": "female",
-      "email": "kirangandhi@gmail.com",
-      "dob": "16-02-1997",
-      "phone": "9639825378",
-      "id": 10
-    },
-    {
-      "name": "bfnncv",
-      "gender": "vn",
-      "email": "vbccncgn@gmail.com",
-      "dob": "2022-10-12",
-      "phone": "33535366",
-      "id": 11
-    },
-    {
-      "name": "ragen patel",
-      "gender": "m",
-      "email": "ragen605@gmail.com",
-      "dob": "1995-04-17",
-      "phone": "81284579200",
-      "id": 12
+      "name": "fhfhfh",
+      "gender": "fdhfdh",
+      "email": "fhfdh@gmail.com",
+      "dob": "2022-10-21",
+      "phone": "2435325344",
+      "id": 15
     }
   ]
 }

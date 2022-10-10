@@ -21,7 +21,7 @@ export class StudentsFormComponent implements OnInit {
   ) {
     this.activatedRoute.params.subscribe((params) => {
       this.id = params['id'];
-      this.editById();
+      // this.editById();
     });
 
     this.studentForm = this.fb.group({
@@ -34,26 +34,22 @@ export class StudentsFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // if(this.id){
-    //   this.getEditbyId();
-    // }
-    this.editById();
+    if(this.id){
+      this.getById();
+    }
+    // this.getById();
   }
 
   onSubmit() {
   if(this.studentForm.valid){
     if(this.id){
-      this.studentService
-      .updateStudents(this.studentForm.value, Number(this.id))
-      .subscribe((data) => {
-        console.log(data);
-      });
-      this.getStudentsData();
+      this.updateData();
     }
     else{
       this.createStudent();
     }
   }
+  this.router.navigate(['students/student-list'])
   }
 
   getStudentsData() {
@@ -65,23 +61,22 @@ export class StudentsFormComponent implements OnInit {
         alert('successfully saved.')
         this.getStudentsData();
       });
-      //  this.getStudentsData();
-      this.router.navigate(['students/student-list'])
   }
 
-  editById() {
-    this.studentService.getStudentDetailsbyId(this.id).subscribe((data) => {
+  getById() {
+    // debugger
+    this.studentService.getStudentDetailsbyId(Number(this.id)).subscribe((data) => {
       this.studentForm.patchValue(data);
     });
   }
 
-  // updateData() {
-  //   this.studentService
-  //     .updateStudents(this.studentForm.value, this.id)
-  //     .subscribe(() => {
-  //       this.getStudentsData();
-  //     });
-  // }
+  updateData() {
+    this.studentService
+      .updateStudents(this.studentForm.value, this.id)
+      .subscribe(() => {
+      });
+      this.getStudentsData();
+  }
 
   // navigation
   onListClick() {
