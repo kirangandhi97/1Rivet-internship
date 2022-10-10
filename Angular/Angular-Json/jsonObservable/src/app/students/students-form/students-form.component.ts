@@ -37,13 +37,18 @@ export class StudentsFormComponent implements OnInit {
     // if(this.id){
     //   this.getEditbyId();
     // }
-    // this.getEditbyId()
+    this.editById();
   }
 
   onSubmit() {
   if(this.studentForm.valid){
     if(this.id){
-      this.updateData();
+      this.studentService
+      .updateStudents(this.studentForm.value, Number(this.id))
+      .subscribe((data) => {
+        console.log(data);
+      });
+      this.getStudentsData();
     }
     else{
       this.createStudent();
@@ -58,6 +63,7 @@ export class StudentsFormComponent implements OnInit {
   createStudent() {
     this.studentService.createStudents(this.studentForm.value).subscribe((result) => {
         alert('successfully saved.')
+        this.getStudentsData();
       });
       //  this.getStudentsData();
       this.router.navigate(['students/student-list'])
@@ -69,13 +75,13 @@ export class StudentsFormComponent implements OnInit {
     });
   }
 
-  updateData() {
-    this.studentService
-      .updateStudents(this.studentForm.value, this.id)
-      .subscribe(() => {
-        this.getStudentsData();
-      });
-  }
+  // updateData() {
+  //   this.studentService
+  //     .updateStudents(this.studentForm.value, this.id)
+  //     .subscribe(() => {
+  //       this.getStudentsData();
+  //     });
+  // }
 
   // navigation
   onListClick() {

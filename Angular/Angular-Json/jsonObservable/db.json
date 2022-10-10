@@ -83,7 +83,7 @@
       "id": 1
     },
     {
-      "name": "yesha",
+      "name": "yeshass",
       "gender": "female",
       "email": "yeshagandhi@gmail.com",
       "dob": "10-03-1999",
@@ -161,6 +161,14 @@
       "dob": "2022-10-12",
       "phone": "33535366",
       "id": 11
+    },
+    {
+      "name": "ragen patel",
+      "gender": "m",
+      "email": "ragen605@gmail.com",
+      "dob": "1995-04-17",
+      "phone": "81284579200",
+      "id": 12
     }
   ]
 }
