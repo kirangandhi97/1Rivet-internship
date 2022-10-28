@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { AuthService } from 'src/app/Service/auth.service';
+import { UserService } from 'src/app/Service/User.service';
 
 @Component({
   selector: 'app-registration',
@@ -9,7 +9,7 @@ import { AuthService } from 'src/app/Service/auth.service';
 })
 export class RegistrationComponent implements OnInit {
 public userForm:FormGroup;
-  constructor(private fb:FormBuilder, private authService:AuthService) { 
+  constructor(private fb:FormBuilder, private userService:UserService) { 
     this.userForm = this.fb.group({
       name:[''],
       email:[''],
@@ -21,7 +21,7 @@ public userForm:FormGroup;
   }
 
   onRegister(){
-    this.authService.postUser(this.userForm.value).subscribe((data)=>{
+    this.userService.postUser(this.userForm.value).subscribe((data)=>{
       console.log(data);
       
     })
