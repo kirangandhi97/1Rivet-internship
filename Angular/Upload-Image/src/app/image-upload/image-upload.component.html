@@ -1,3 +1,10 @@
-<p>image-upload works!</p>
+<form [formGroup]="uploadImageForm" (ngSubmit)="onSubmit()">
+    <input type="file" (change)="onSelectfiles($event)" formControlName="logoName">
+    <img [src]="image" alt="logo">
+    <button type="submit">submit</button>
+</form>
 
-<input type="file" (click)="onSelectfiles($event)">
+
+<ul>
+    <li *ngFor="let data of imageData"><img [src]="data.logoPath"></li>
+</ul>
