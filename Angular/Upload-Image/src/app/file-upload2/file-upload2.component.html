@@ -1,0 +1,7 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+<input type="file" placeholder="please select file here..." (change)="onSelectedImage($event)">
+<div class="progress" *ngIf="fileUpload.status == 'progress'">
+    <div class="progress-bar" role="progressbar" [style.width.%]="fileUpload.message">{{fileUpload.message}}%</div>
+  </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

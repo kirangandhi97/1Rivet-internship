@@ -33,7 +33,7 @@
         <input type="file" (change)="onSelectfile4($event)" formControlName="logoName4">
         <img height="200" width="200" [src]="image4" alt="logo">
         <br>
-        <div class="progress w-50">
+        <div class="progress w-50" *ngIf="barWidth4!='0%'">
             <span [innerHTML]="barWidth4"></span>
             <div class="progress-bar" role="progressbar" [style.width]="barWidth4"></div>
         </div>
@@ -43,7 +43,7 @@
         <input type="file" (change)="onSelectfile5($event)" formControlName="logoName5">
         <img height="200" width="200" [src]="image5" alt="logo">
         <br>
-        <div class="progress w-50">
+        <div class="progress w-50" *ngIf="barWidth5!='0%'">
             <span [innerHTML]="barWidth5"></span>
             <div class="progress-bar" role="progressbar" [style.width]="barWidth5"></div>
         </div>
@@ -65,6 +65,8 @@
         <span [innerHTML]="barWidth"></span>
         <div class="progress-bar" [style.width]="barWidth"></div>
       </div> -->
+      <!-- <br><br><br>
+      <button class="btn btn-success" type="submit">Save</button> -->
 
 </form>
 

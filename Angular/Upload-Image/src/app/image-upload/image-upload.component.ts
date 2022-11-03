@@ -208,9 +208,12 @@ this.barWidth2 = Math.round((100/(event.total||0)*event.loaded)) + "%";
     }
   })).subscribe(res => {
     // console.log(res);
-    if(this.uploadImageForm.controls['logoName2'].valid){
-      this.uploadImageForm.get('logoName3')?.enable();
+    if(this.barWidth2=='100%'){
+      if(this.uploadImageForm.controls['logoName2'].valid){
+        this.uploadImageForm.get('logoName3')?.enable();
+      }
     }
+    
   })
 }
 onfile3Submit(){
@@ -229,9 +232,12 @@ this.barWidth3 = Math.round((100/(event.total||0)*event.loaded)) + "%";
     }
   })).subscribe(res => {
     // console.log(res);
-    if(this.uploadImageForm.controls['logoName3'].valid){
-      this.uploadImageForm.get('logoName4')?.enable();
+    if(this.barWidth3=='100%'){
+      if(this.uploadImageForm.controls['logoName3'].valid){
+        this.uploadImageForm.get('logoName4')?.enable();
+      }
     }
+    
   })
 }
 onfile4Submit(){
@@ -251,9 +257,12 @@ this.barWidth4 = Math.round((100/(event.total||0)*event.loaded)) + "%";
     }
   })).subscribe(res => {
     // console.log(res);
-    if(this.uploadImageForm.controls['logoName4'].valid){
-      this.uploadImageForm.get('logoName5')?.enable();
+    if(this.barWidth4=='100%'){
+      if(this.uploadImageForm.controls['logoName4'].valid){
+        this.uploadImageForm.get('logoName5')?.enable();
+      }
     }
+    
   })
 }
 onfile5Submit(){
@@ -283,4 +292,6 @@ getAllData(){
     this.imageData = data;
   })
 }
+
+
 }
