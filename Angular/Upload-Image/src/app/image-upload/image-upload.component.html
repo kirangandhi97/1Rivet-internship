@@ -1,7 +1,71 @@
-<form [formGroup]="uploadImageForm" (ngSubmit)="onSubmit()">
-    <input type="file" (change)="onSelectfiles($event)" formControlName="logoName">
-    <img [src]="image" alt="logo">
-    <button type="submit">submit</button>
+<form [formGroup]="uploadImageForm">
+    <div class="progress-1" >
+        <input type="file" (change)="onSelectfile1($event)" formControlName="logoName1">
+        <img height="200" width="200" [src]="image1" alt="logo">
+        <br>
+        <div class="progress w-50" *ngIf="barWidth1!='0%'">
+            <span [innerHTML]="barWidth1"></span>
+            <div class="progress-bar" role="progressbar" [style.width]="barWidth1"></div>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="progress-2">
+        <input type="file" (change)="onSelectfile2($event)" formControlName="logoName2">
+        <img height="200" width="200" [src]="image2" alt="logo">
+        <br>
+        <div class="progress w-50" *ngIf="barWidth2!='0%'">
+            <span [innerHTML]="barWidth2"></span>
+            <div class="progress-bar" role="progressbar" [style.width]="barWidth2"></div>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="progress-3">
+        <input type="file" (change)="onSelectfile3($event)" formControlName="logoName3">
+        <img height="200" width="200" [src]="image3" alt="logo">
+        <br>
+        <div class="progress w-50" *ngIf="barWidth3!='0%'">
+            <span [innerHTML]="barWidth3"></span>
+            <div class="progress-bar" role="progressbar" [style.width]="barWidth3"></div>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="progress-4">
+        <input type="file" (change)="onSelectfile4($event)" formControlName="logoName4">
+        <img height="200" width="200" [src]="image4" alt="logo">
+        <br>
+        <div class="progress w-50">
+            <span [innerHTML]="barWidth4"></span>
+            <div class="progress-bar" role="progressbar" [style.width]="barWidth4"></div>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="progress-5">
+        <input type="file" (change)="onSelectfile5($event)" formControlName="logoName5">
+        <img height="200" width="200" [src]="image5" alt="logo">
+        <br>
+        <div class="progress w-50">
+            <span [innerHTML]="barWidth5"></span>
+            <div class="progress-bar" role="progressbar" [style.width]="barWidth5"></div>
+        </div>
+    </div>
+    <!-- <div class="progress-3">
+        <input type="file" (change)="onSelectfiles($event)" formControlName="logoName">
+        <img [src]="image" alt="logo">
+        <br>
+        <div class="progress w-50">
+            <span [innerHTML]="barWidth"></span>
+            <div class="progress-bar" role="progressbar" [style.width]="barWidth"></div>
+        </div>
+    </div> -->
+
+
+
+<!-- progress bar  -->
+    <!-- <div class="progress" *ngIf="barWidth!='0%'">
+        <span [innerHTML]="barWidth"></span>
+        <div class="progress-bar" [style.width]="barWidth"></div>
+      </div> -->
+
 </form>
 
 
