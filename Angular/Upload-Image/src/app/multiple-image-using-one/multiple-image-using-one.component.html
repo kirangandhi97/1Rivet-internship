@@ -1,0 +1,4 @@
+<form>
+    <input type="file" (change)="onSelect($event)">
+    <img *ngFor="let url of urls" [src]="url" alt="logo">
+</form>

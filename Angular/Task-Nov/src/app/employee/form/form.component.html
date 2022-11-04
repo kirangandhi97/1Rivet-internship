@@ -1,0 +1,18 @@
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmitForm()">
+    <div class="form-group">
+      <input type="text" placeholder="Enter Firstname" formControlName="firstname">
+    </div>
+    <div class="form-group">
+      <input type="text" placeholder="Enter Lastname" formControlName="lastname">
+    </div>
+    <div class="form-group">
+      <input type="email" placeholder="Enter email" formControlName="email">
+    </div>
+    <div class="form-group">
+      <input type="text" placeholder="Enter Contact" formControlName="phoneNo">
+    </div>
+    <div class="form-group">
+      <input type="text" placeholder="Enter Salary" formControlName="salary">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

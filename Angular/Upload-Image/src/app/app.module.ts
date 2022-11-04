@@ -9,13 +9,15 @@ import { StackBlitzComponent } from './stack-blitz/stack-blitz.component';
 import { HttpClientModule} from '@angular/common/http';
 import { FileUpload2Component } from './file-upload2/file-upload2.component'
 import { RouterModule } from '@angular/router';
+import { MultipleImageUsingOneComponent } from './multiple-image-using-one/multiple-image-using-one.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ImageUploadComponent,
     StackBlitzComponent,
-    FileUpload2Component
+    FileUpload2Component,
+    MultipleImageUsingOneComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,6 @@
 import { HttpClient, HttpEventType } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { DomSanitizer } from '@angular/platform-browser';
 import { map } from 'rxjs';
 import { ImageUploadService } from '../image-upload.service';
 
@@ -192,7 +191,7 @@ this.barWidth1 = Math.round((100/(event.total||0)*event.loaded)) + "%";
 
 }
 onfile2Submit(){
-  this.uploadImageForm.controls['logoPath2'].setValue(this.base64String2);
+  this.uploadImageForm.controls['logoPath1'].setValue(this.base64String2);
   
   // this.uploadService.postData(this.uploadImageForm.value).subscribe((data)=>{
   // })
@@ -217,7 +216,7 @@ this.barWidth2 = Math.round((100/(event.total||0)*event.loaded)) + "%";
   })
 }
 onfile3Submit(){
-  this.uploadImageForm.controls['logoPath3'].setValue(this.base64String2);
+  this.uploadImageForm.controls['logoPath1'].setValue(this.base64String2);
   // this.uploadService.postData(this.uploadImageForm.value).subscribe((data)=>{
   // })
   return this.httpclient.post(this.url, this.uploadImageForm.value, {
@@ -241,7 +240,7 @@ this.barWidth3 = Math.round((100/(event.total||0)*event.loaded)) + "%";
   })
 }
 onfile4Submit(){
-  this.uploadImageForm.controls['logoPath4'].setValue(this.base64String2);
+  this.uploadImageForm.controls['logoPath1'].setValue(this.base64String2);
   
   // this.uploadService.postData(this.uploadImageForm.value).subscribe((data)=>{
   // })
@@ -266,7 +265,7 @@ this.barWidth4 = Math.round((100/(event.total||0)*event.loaded)) + "%";
   })
 }
 onfile5Submit(){
-  this.uploadImageForm.controls['logoPath5'].setValue(this.base64String2);
+  this.uploadImageForm.controls['logoPath1'].setValue(this.base64String2);
   
   // this.uploadService.postData(this.uploadImageForm.value).subscribe((data)=>{
   // })
