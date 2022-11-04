@@ -8,6 +8,7 @@ import { FormComponent } from './form/form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeeService } from './employee.service';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { EmployeeService } from './employee.service';
     CommonModule,
     EmployeeRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ],
   providers:[EmployeeService]
 })
