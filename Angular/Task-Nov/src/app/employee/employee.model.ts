@@ -4,5 +4,6 @@ export class Employee{
     email!:string;
     phoneNo!:string;
     salary!:string;
+    fullname!:string;
 
 }

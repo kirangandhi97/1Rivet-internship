@@ -6,13 +6,14 @@ const routes: Routes = [
   {
     path:'',
     pathMatch:'full',
-    redirectTo:'employee'
+    redirectTo:'select'
   },
 
   {
     path: 'employee',
     loadChildren: () => import('./employee/employee.module').then(m => m.EmployeeModule)
   },
+  { path: 'select', loadChildren: () => import('./select/select.module').then(m => m.SelectModule) },
   {
     path:'**',
     component:PageNotFoundComponent

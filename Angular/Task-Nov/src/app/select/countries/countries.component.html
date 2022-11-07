@@ -1,0 +1,18 @@
+
+<div class="container-fluid d-flex align-items-center flex-column">
+  <div class="select-country d-flex">
+    <select class="form-select me-3" aria-label="Default select example" (change)="getStateByCountryID($event)">
+      <option selected>select Country</option>
+      <option *ngFor="let country of Countries" [value]="country.id">{{country.name}}</option>
+    </select>
+    <select class="form-select me-3" aria-label="Default select example" (change)="getCityByStateId($event)">
+      <option selected>select State</option>
+      <option *ngFor="let state of displayState" [value]="state.id">{{state.name}}</option>
+    </select>
+    <select class="form-select" aria-label="Default select example">
+      <option selected>select City</option>
+      <option *ngFor="let city of displayCities">{{city.name}}</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-success mt-3">Save</button>
+</div>

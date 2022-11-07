@@ -14,12 +14,17 @@ export class OverlayService {
     const overlayRef = this.overlay.create(
       {
         positionStrategy,
-        // backdropClass:''
-      panelClass:'overlay-panel'
+        backdropClass:'backDropClass',
+        hasBackdrop:true,
+        panelClass:'overlay-panel',
+        
       }
     );
     const formOverlay = new ComponentPortal(component);
     overlayRef.attach(formOverlay);
 
+    overlayRef.backdropClick().subscribe(()=>{
+      overlayRef.detach();
+    })
   }
 }

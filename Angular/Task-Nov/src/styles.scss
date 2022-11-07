@@ -22,4 +22,9 @@ display: flex;
 flex-direction: column;
 background-color: #fff;
 padding: 20px;
+border-radius: 10px;
+}
+
+.backDropClass{
+    background-color: rgba(0,0,0,0.5);
 }

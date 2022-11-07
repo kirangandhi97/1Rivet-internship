@@ -1,18 +1,24 @@
-<form [formGroup]="employeeForm" (ngSubmit)="onSubmitForm()" class="d-flex flex-column align-items-center justify-content-center">
+<div class="form-container">
+  <h3 class="text-success text-center"><strong>Employee Form</strong></h3>
+  <form [formGroup]="employeeForm" (ngSubmit)="onSubmitForm()" class="d-flex flex-column justify-content-center">
     <div class="form-group">
-      <input type="text" placeholder="Enter Firstname" formControlName="firstname">
+      <input type="text" class="form-control mb-3" placeholder="Enter Firstname" formControlName="firstname">
     </div>
     <div class="form-group">
-      <input type="text" placeholder="Enter Lastname" formControlName="lastname">
+      <input type="text" class="form-control mb-3" placeholder="Enter Lastname" formControlName="lastname">
     </div>
     <div class="form-group">
-      <input type="email" placeholder="Enter email" formControlName="email">
+      <input type="email" class="form-control mb-3" placeholder="Enter email" formControlName="email">
     </div>
     <div class="form-group">
-      <input type="text" placeholder="Enter Contact" formControlName="phoneNo">
+      <input type="text" class="form-control mb-3" placeholder="Enter Contact" formControlName="phoneNo">
     </div>
     <div class="form-group">
-      <input type="text" placeholder="Enter Salary" formControlName="salary">
+      <input type="text" class="form-control mb-3" placeholder="Enter Salary" formControlName="salary">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="btn-container d-flex">
+      <button type="submit" class="btn btn-primary me-3">Submit</button>
+      <button class="btn btn-danger" (click)="onCancel()">Cancel</button>
+    </div>
   </form>
+</div>
