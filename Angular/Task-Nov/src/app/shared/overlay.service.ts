@@ -1,10 +1,13 @@
 import { Overlay } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { FormComponent } from '../employee/form/form.component';
 
 @Injectable()
 export class OverlayService {
+  public onDetach =new Subject<boolean>;
+  public overlayData:any;
 
   constructor(private overlay: Overlay) {
 
@@ -21,10 +24,17 @@ export class OverlayService {
       }
     );
     const formOverlay = new ComponentPortal(component);
-    overlayRef.attach(formOverlay);
+    this.overlayData=  overlayRef.attach(formOverlay);
 
     overlayRef.backdropClick().subscribe(()=>{
       overlayRef.detach();
     })
+
+    this.onDetach.subscribe(()=>{
+      overlayRef.detach();
+    })
+    return this.overlayData;
   }
+
+
 }

@@ -9,6 +9,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeeService } from './employee.service';
 import { SharedModule } from '../shared/shared.module';
+import { EmployeeAdapter } from './employee.adapter';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -22,8 +24,12 @@ import { SharedModule } from '../shared/shared.module';
     EmployeeRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
+    RouterModule
   ],
-  providers:[EmployeeService]
+  providers:[
+    EmployeeService,
+  EmployeeAdapter
+  ]
 })
 export class EmployeeModule { }

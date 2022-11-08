@@ -1,28 +1,20 @@
 {
   "employee": [
     {
-      "firstname": "kiran",
-      "lastname": "gandhi",
-      "email": "kirangandhi97@gmail.com",
-      "phoneNo": "123456",
-      "salary": "646544",
+      "firstname": "nikunj",
+      "lastname": "patel",
+      "email": "n@ghcishc",
+      "phoneNo": "677886",
+      "salary": "6896",
       "id": 1
     },
     {
-      "firstname": "",
-      "lastname": "",
-      "email": "",
-      "phoneNo": "",
-      "salary": "",
+      "firstname": "vishvani",
+      "lastname": "patel",
+      "email": "jgbkshojv",
+      "phoneNo": "8976575",
+      "salary": "655858",
       "id": 2
-    },
-    {
-      "firstname": "yesha",
-      "lastname": "gandhi",
-      "email": "yeshagandhi101@gmail.com",
-      "phoneNo": "46757387",
-      "salary": "546474",
-      "id": 3
     }
   ],
   "country": [
@@ -35,98 +27,87 @@
       "name": "USA"
     }
   ],
-
-
-
   "state": [
     {
       "id": 1,
-      "countryId":1,
+      "countryId": 1,
       "name": "Gujarat"
-
     },
     {
       "id": 2,
-      "countryId":1,
+      "countryId": 1,
       "name": "Maharashtra"
-
     },
     {
       "id": 3,
-      "countryId":2,
+      "countryId": 2,
       "name": "California"
-
     },
     {
       "id": 4,
-      "countryId":2,
+      "countryId": 2,
       "name": "Texas"
-
     }
   ],
-
-
-
-
   "city": [
     {
       "id": 1,
-      "stateId":1,
+      "stateId": 1,
       "name": "Navsari"
     },
     {
       "id": 2,
-      "stateId":1,
+      "stateId": 1,
       "name": "Ahmedabad"
     },
     {
       "id": 3,
-      "stateId":1,
+      "stateId": 1,
       "name": "Valsad"
     },
     {
       "id": 4,
-      "stateId":2,
+      "stateId": 2,
       "name": "Mumbai"
     },
     {
       "id": 5,
-      "stateId":2,
+      "stateId": 2,
       "name": "Pune"
     },
     {
       "id": 6,
-      "stateId":2,
+      "stateId": 2,
       "name": "Nashik"
     },
     {
       "id": 7,
-      "stateId":3,
+      "stateId": 3,
       "name": "Los Angeles"
     },
     {
       "id": 8,
-      "stateId":3,
+      "stateId": 3,
       "name": "San Francisco"
     },
     {
       "id": 9,
-      "stateId":3,
+      "stateId": 3,
       "name": "San Diego"
     },
     {
       "id": 10,
-      "stateId":4,
+      "stateId": 4,
       "name": "Houston"
     },
     {
       "id": 11,
-      "stateId":4,
+      "stateId": 4,
       "name": "Austin"
     },
     {
       "id": 12,
-      "stateId":4,
+      "stateId": 4,
       "name": "Dallas"
     }
   ]
