@@ -1,10 +1,10 @@
 {
   "employee": [
     {
-      "firstname": "nikunj",
+      "firstname": "nikunjdd",
       "lastname": "patel",
       "email": "n@ghcishc",
-      "phoneNo": "677886",
+      "phoneNo": "(465) (785)-88568",
       "salary": "6896",
       "id": 1
     },
@@ -12,9 +12,121 @@
       "firstname": "vishvani",
       "lastname": "patel",
       "email": "jgbkshojv",
-      "phoneNo": "8976575",
+      "phoneNo": "(223) (332)-32322",
       "salary": "655858",
       "id": 2
+    },
+    {
+      "firstname": "hiral",
+      "lastname": "dubal",
+      "email": "hir112@gmail.com",
+      "phoneNo": "(768) (896)-89699",
+      "salary": "23",
+      "id": 3
+    },
+    {
+      "firstname": "jinal",
+      "lastname": "tandel",
+      "email": "jinal112@gmail.com",
+      "phoneNo": "(647) (868)-86868",
+      "salary": "676",
+      "id": 4
+    },
+    {
+      "firstname": "sheetal",
+      "lastname": "patel",
+      "email": "sheetal112@gmail.com",
+      "phoneNo": "(678) (886)-87899",
+      "salary": "545",
+      "id": 5
+    },
+    {
+      "firstname": "nikunj",
+      "lastname": "patel",
+      "email": "n@ghcishc",
+      "phoneNo": "677886",
+      "salary": "6896",
+      "id": 6
+    },
+    {
+      "firstname": "vishvani",
+      "lastname": "patel",
+      "email": "jgbkshojv",
+      "phoneNo": "8976575",
+      "salary": "655858",
+      "id": 7
+    },
+    {
+      "firstname": "hiral",
+      "lastname": "dubal",
+      "email": "hir112@gmail.com",
+      "phoneNo": "(768) (896)-89699",
+      "salary": "23",
+      "id": 8
+    },
+    {
+      "firstname": "jinal",
+      "lastname": "tandel",
+      "email": "jinal112@gmail.com",
+      "phoneNo": "(647) (868)-86868",
+      "salary": "676",
+      "id": 9
+    },
+    {
+      "firstname": "sheetal",
+      "lastname": "patel",
+      "email": "sheetal112@gmail.com",
+      "phoneNo": "(678) (886)-87899",
+      "salary": "545",
+      "id": 10
+    },
+    {
+      "firstname": "nikunj",
+      "lastname": "patel",
+      "email": "n@ghcishc",
+      "phoneNo": "677886",
+      "salary": "6896",
+      "id": 11
+    },
+    {
+      "firstname": "vishvani",
+      "lastname": "patel",
+      "email": "jgbkshojv",
+      "phoneNo": "8976575",
+      "salary": "655858",
+      "id": 12
+    },
+    {
+      "firstname": "hiral",
+      "lastname": "dubal",
+      "email": "hir112@gmail.com",
+      "phoneNo": "(768) (896)-89699",
+      "salary": "23",
+      "id": 13
+    },
+    {
+      "firstname": "jinal",
+      "lastname": "tandel",
+      "email": "jinal112@gmail.com",
+      "phoneNo": "(647) (868)-86868",
+      "salary": "676",
+      "id": 14
+    },
+    {
+      "firstname": "sheetal",
+      "lastname": "patel",
+      "email": "sheetal112@gmail.com",
+      "phoneNo": "(678) (886)-87899",
+      "salary": "545",
+      "id": 15
+    },
+    {
+      "firstname": "nishtha",
+      "lastname": "patell",
+      "email": "nishthap@gmail.com",
+      "phoneNo": "(133) (444)-44444",
+      "salary": "345",
+      "id": 16
     }
   ],
   "country": [

@@ -1,8 +1,8 @@
 <button class="btn btn-success" (click)="onAddNew()">Add New</button>
-
-<div class="listTable h-100">
+<div infinite-scroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="0" [scrollWindow]="false" (scrolled)="onScroll()"
+  class="listTable  overflow-auto" style="height: 300px;">
   <table class="table border">
-    <thead>
+    <thead class="position-sticky top-0 bg-white">
       <tr class="border-1">
         <th scope="col">FullName</th>
         <!-- <th scope="col">First Name</th>
@@ -20,7 +20,7 @@
         <td>{{data.fullname | titlecase}}</td>
         <td>{{data.email}}</td>
         <td>{{data.phoneNo}}</td>
-        <td>{{data.salary}}</td>
+        <td>{{data.salary| currencyINR | currency:'INR':'symbol'}}</td>
         <td><button class="btn btn-warning" (click)="onEdit(data)">Edit</button></td>
       </tr>
     </tbody>

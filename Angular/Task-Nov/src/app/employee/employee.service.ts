@@ -11,10 +11,15 @@ export class EmployeeService {
   constructor(private http: HttpClient, private employeeAdapter: EmployeeAdapter) {
     this.employeeUrl = 'http://localhost:3000/employee/';
   }
-
+/**
+ * 
+ * @param pageCount 
+ * @param dataAtATime 
+ * @returns 
+ */
   // get all data 
-  getEmployees(): Observable<Employee[]> {
-    return this.http.get<Employee[]>(this.employeeUrl)
+  getEmployees(pageCount:number,dataAtATime:number): Observable<Employee[]> {
+    return this.http.get<Employee[]>(`${this.employeeUrl}?_page=${pageCount}&_limit=${dataAtATime}`)
       .pipe(map((data: Employee[]) => {
         return data.map((item: Employee) => this.employeeAdapter.toResponse(item))
       }));
@@ -23,5 +28,9 @@ export class EmployeeService {
   // post Employee 
   postEmployee(employee: Employee): Observable<Employee> {
     return this.http.post<Employee>(this.employeeUrl, employee);
+  }
+
+  updateEmployeeData(employee:Employee,id:number):Observable<Employee>{
+    return this.http.put<Employee>(this.employeeUrl+id,employee);
   }
 }

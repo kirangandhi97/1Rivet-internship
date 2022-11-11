@@ -11,6 +11,7 @@ import { EmployeeService } from './employee.service';
 import { SharedModule } from '../shared/shared.module';
 import { EmployeeAdapter } from './employee.adapter';
 import { RouterModule } from '@angular/router';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { RouterModule } from '@angular/router';
     ReactiveFormsModule,
     HttpClientModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    InfiniteScrollModule
   ],
   providers:[
     EmployeeService,

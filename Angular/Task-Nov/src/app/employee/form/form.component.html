@@ -10,9 +10,13 @@
     <div class="form-group">
       <input type="email" class="form-control mb-3" placeholder="Enter email" formControlName="email">
     </div>
-    <div class="form-group">
-      <input type="text" class="form-control mb-3" placeholder="Enter Contact" formControlName="phoneNo">
+    <div class="input-group mb-3">
+      <span class="input-group-text">+91</span>
+      <input type="text" class="form-control" placeholder="Enter Contact" formControlName="phoneNo" appPhoneMasking>
     </div>
+    <!-- <div class="form-group">
+      <input type="text" class="form-control mb-3" placeholder="Enter Contact" formControlName="phoneNo">
+    </div> -->
     <div class="input-group mb-3">
       <span class="input-group-text">$</span>
       <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" formControlName="salary">
@@ -20,7 +24,7 @@
     </div>
     <div class="btn-container d-flex">
       <button type="submit" class="btn btn-primary me-3">Submit</button>
-      <button class="btn btn-danger" (click)="onCancel()">Cancel</button>
+      <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
     </div>
   </form>
 </div>
